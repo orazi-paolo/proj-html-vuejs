@@ -2,18 +2,17 @@
 export default {
   data() {
     return {
-      
+
     }
   }
 }
 </script>
 
 <template>
-    <h3>
-        Navbar
-    </h3>
+  <h3>
+    Navbar di tommaso
+  </h3>
 
 </template>
 
-<style scoped>
-</style>
+<style scoped></style>
