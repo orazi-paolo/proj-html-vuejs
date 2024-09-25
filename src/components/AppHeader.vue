@@ -1,6 +1,7 @@
 <script>
 import AppHeaderNavbar from './appHeaderChild/AppHeaderNavbar.vue'
 import AppHeaderSection from './appHeaderChild/AppHeaderSection.vue'
+import BaseButton from './baseComponents/BaseButton.vue'
 export default {
   data() {
     return {
@@ -9,7 +10,8 @@ export default {
   },
   components: {
     AppHeaderNavbar,
-    AppHeaderSection
+    AppHeaderSection,
+    BaseButton
   }
 }
 </script>
@@ -20,6 +22,7 @@ export default {
 </h1>
 <AppHeaderNavbar />
 <AppHeaderSection />
+<BaseButton contentButton="PINCOPALLINO" :isArrow="true"/>
 
 </template>
 
