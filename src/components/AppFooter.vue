@@ -16,7 +16,7 @@ export default {
 
 <template>
     <h1>
-        Io sono AppFooter
+        Io sono AppFooter di Paolo
     </h1>
     <AppFooterNewsLetter />
     <AppFooterColList />
