@@ -11,7 +11,7 @@ export default {
   components: {
     AppHeaderNavbar,
     AppHeaderSection,
-    BaseButton
+    BaseButton,
   }
 }
 </script>
@@ -23,6 +23,7 @@ export default {
 <AppHeaderNavbar />
 <AppHeaderSection />
 <BaseButton contentButton="PINCOPALLINO" :isArrow="true"/>
+
 
 </template>
 
