@@ -1,9 +1,9 @@
 <script>
 export default {
-  data() {
+    data() {
         return {
-      
-    }
+
+        }
     },
     props: {
         isCenter: {
@@ -43,16 +43,16 @@ export default {
 </template>
 
 <style lang="scss" scoped>
-div{
-    background-color: black;
-
-    .subtitle{
+div {
+    .subtitle {
         color: #94CB53;
     }
-    h1{
-     color: white;
+
+    h1 {
+        color: white;
     }
-    p{
+
+    p {
         color: #EBEBEB;
     }
 }
