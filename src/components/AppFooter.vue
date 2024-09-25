@@ -1,9 +1,15 @@
 <script>
+import AppFooterNewsLetter from './appFooterChild/AppFooterNewsLetter.vue'
+import AppFooterColList from './appFooterChild/AppFooterColList.vue'
 export default {
   data() {
     return {
       
     }
+  },
+  components: {
+    AppFooterNewsLetter,
+    AppFooterColList
   }
 }
 </script>
@@ -12,6 +18,8 @@ export default {
     <h1>
         Io sono AppFooter
     </h1>
+    <AppFooterNewsLetter />
+    <AppFooterColList />
 
 </template>
 

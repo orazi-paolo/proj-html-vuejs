@@ -1,9 +1,15 @@
 <script>
+import AppHeaderNavbar from './appHeaderChild/AppHeaderNavbar.vue'
+import AppHeaderSection from './appHeaderChild/AppHeaderSection.vue'
 export default {
   data() {
     return {
       
     }
+  },
+  components: {
+    AppHeaderNavbar,
+    AppHeaderSection
   }
 }
 </script>
@@ -12,6 +18,9 @@ export default {
 <h1>
     Io sono AppHeader
 </h1>
+<AppHeaderNavbar />
+<AppHeaderSection />
+
 </template>
 
 <style scoped>
