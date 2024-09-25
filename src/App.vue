@@ -21,9 +21,11 @@ export default {
   <AppHeader />
   <AppMain />
   <AppFooter />
+  <p>Ciao</p>
 
 </template>
 
 <style lang="scss">
-@use "/node_modules/bootstrap/scss/bootstrap.scss"
+@use "/node_modules/bootstrap/scss/bootstrap.scss";
+@use "/src/style/general.scss"
 </style>
