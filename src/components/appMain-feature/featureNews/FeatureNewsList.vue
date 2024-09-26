@@ -48,14 +48,14 @@ export default {
       <!-- Main card -->
       <div class="col-7 mb-4">
         <div class="card-news text-white">
-            <img :src="mainCard.image" :alt="mainCard.title">
+            <img :src="mainCard.image" :alt="mainCard.title" class="pointer">
             <div class="card-body p-4">
               <div class="card-news-subtitle mb-3" >
                 <span class="pe-5"><span><img class="pe-2" src="../../../assets/icon/clock.png" alt="icon clock"></span>{{ mainCard.clock }}</span>
                 <span class="pe-5"><span><img class="pe-2" src="../../../assets/icon/eye.png" alt="icon eye"></span>{{ mainCard.visual }}</span>
                 <span class="pe-5"><span><img class="pe-2" src="../../../assets/icon/calendar.png" alt="icon calendar"></span> {{ mainCard.date }}</span>
               </div>
-              <h4 class="card-title text-white">{{ mainCard.title }}</h4>
+              <h4 class="card-title text-white pointer">{{ mainCard.title }}</h4>
             </div>
         </div>
       </div>

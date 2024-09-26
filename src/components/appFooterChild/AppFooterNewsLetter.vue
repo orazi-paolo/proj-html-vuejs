@@ -34,7 +34,9 @@ export default {
                 <div class="form-group input-area d-flex align-items-center">
                   <input type="text" placeholder="Enter your email">
                   <button class="btn-area">
-                    <img :src="newsLetter.imgButton" alt="send">
+                    <a href="#header" class="transition-link">
+                      <img :src="newsLetter.imgButton" alt="send">
+                    </a>
                   </button>
                 </div>
               </div>
@@ -56,7 +58,7 @@ export default {
 
     .footer-form{
       border-radius: 30px;
-      background-color: #30405f;
+      background-color: #30405F;
       padding: 80px 60px 72px;
 
       .title{
@@ -72,7 +74,7 @@ export default {
       }
       .input-area{
         background-color: #425374;
-        outline: 1px solid #556f9c;
+        outline: 1px solid #30455f;
         border-radius: 10px;
         input{
           margin: 4px;
@@ -83,7 +85,7 @@ export default {
           input, textarea{
             width: 100%;
             border-radius: 10px;
-            outline-color: transparent;
+            outline-color: #94CB53;
           }
         }
       }
@@ -93,6 +95,10 @@ export default {
         min-width: 50px;
         min-height: 50px;
         cursor: pointer;
+        padding: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
       }
       .img{
         max-width: 100%;
