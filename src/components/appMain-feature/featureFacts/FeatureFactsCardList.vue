@@ -20,10 +20,18 @@ export default {
 
 <!-- FeatureFactsCardList -->
 <template>
-  <ul>
-    <FeatureFactsCardListItem />
+  <ul id="list-facts">
+    <FeatureFactsCardListItem 
+      v-for="(fact, index) in listFacts" :key="index" :fact="fact"
+    />
   </ul>
 </template>
 
-<style scoped>
+<style lang="scss">
+  #list-facts{
+    width: 100%;
+    list-style-type: none;
+    display: flex;
+    gap: 20px;
+  }
 </style>
