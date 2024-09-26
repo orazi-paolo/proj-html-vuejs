@@ -21,7 +21,6 @@ export default {
   <AppHeader />
   <AppMain />
   <AppFooter />
-  <p>Ciao</p>
 
 </template>
 

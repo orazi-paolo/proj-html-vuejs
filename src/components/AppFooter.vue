@@ -1,6 +1,7 @@
 <script>
 import AppFooterNewsLetter from './appFooterChild/AppFooterNewsLetter.vue'
 import AppFooterColList from './appFooterChild/AppFooterColList.vue'
+import AppFooterCopyright from './appFooterChild/AppFooterCopyright.vue'
 export default {
   data() {
     return {
@@ -11,7 +12,8 @@ export default {
   },
   components: {
     AppFooterNewsLetter,
-    AppFooterColList
+    AppFooterColList,
+    AppFooterCopyright
   }
 }
 </script>
@@ -63,7 +65,7 @@ export default {
           </div>
       </div>
     </div>
-
+    <AppFooterCopyright />
   </footer>
 
 </template>
@@ -71,7 +73,6 @@ export default {
 <style lang="scss" scoped>
 .bg-footer {
   background-color: #27344a;
-  padding-bottom: 100px;
 }
 ul li a{
   color: lightgray;
@@ -85,5 +86,8 @@ ul li a{
 }
 span{
   color: #94CB53;
+}
+.container{
+  padding-bottom: 150px;
 }
 </style>
