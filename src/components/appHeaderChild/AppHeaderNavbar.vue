@@ -70,7 +70,7 @@ export default {
             </li>
           </ul>
           <div class="d-flex align-items-center">
-            <div class="cart p-2 me-2 position-relative"><img src="../../assets/icon/cart-icon.png" alt="cart"><span
+            <div class="cart p-2 me-2"><img src="../../assets/icon/cart-icon.png" alt="cart"><span
                 class="number-object-cart">03</span></div>
             <BaseButton contentButton="LIVE STREAMING" :isArrow="false" />
           </div>
@@ -81,24 +81,40 @@ export default {
 </template>
 
 <style lang="scss" scoped>
+li {
+  position: relative;
+}
+
 #header-nav .navbar-nav {
   margin-right: 80px;
 }
 
 .link:hover>.internal-link {
   display: block;
+  position: absolute;
+  left: -50%;
+  top: 100%;
 }
 
 .int:hover .sub-link {
   display: block;
+  position: absolute;
+  left: 95%;
+  top: 10%;
 }
 
 .internal-link,
 .sub-link {
   display: none;
+  background-color: #30405F;
+  padding-left: 40px;
+  border-radius: 3px;
+  width: 220px;
+  box-shadow: 0 0 3px black;
 
   ul {
     list-style-type: none;
+    padding: 0;
   }
 }
 
@@ -125,6 +141,7 @@ a {
   justify-content: flex-end;
 
   .cart {
+    position: relative;
     cursor: pointer;
 
     .number-object-cart {
