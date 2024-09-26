@@ -46,6 +46,7 @@ export default {
         }
         .box-info{
             flex-grow: 1;
+            color: #fff;
         }
     }
 
