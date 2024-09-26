@@ -17,7 +17,7 @@ export default {
 
 <template>
   <!-- Banner section   -->
-  <section>
+  <section class="bg-black p-5">
     <!-- Discount Title  -->
     <div
       class="container discount-title d-flex flex-column justify-content-center align-items-center text-white rounded-3 position-relative p-3  overflow-y-hidden">
@@ -38,8 +38,6 @@ export default {
 
 <style lang="scss" scoped>
 section {
-  background-color: black;
-
   .discount-title {
     background-image: url("../../assets/banner-item-bg.png");
     background-size: cover;
