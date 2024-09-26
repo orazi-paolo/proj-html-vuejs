@@ -47,6 +47,11 @@ export default {
 
 <style lang="scss" scoped>
 .newsletter{
+  position: relative;
+  top: -50%;
+  left: 0;
+  transform: translateY(-50%);
+
     .footer-form{
       border-radius: 30px;
       background-color: #30405f;

@@ -15,10 +15,13 @@ export default {
 </script>
 
 <template>
+  <footer>
     <AppFooterNewsLetter />
     <AppFooterColList />
 
+  </footer>
+
 </template>
 
-<style scoped>
+<style lang="scss" scoped>
 </style>
