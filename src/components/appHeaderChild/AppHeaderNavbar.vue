@@ -50,6 +50,9 @@ export default {
     getCartImageUrl(url) {
       return new URL(`../../assets/${url}`, import.meta.url).href;
     },
+    deleteItemCart(i) {
+      this.cartObject.splice(i, 1)
+    }
 
   },
   mounted() {
@@ -99,9 +102,9 @@ export default {
                   <span>{{ cartNumber }}</span>
                 </div>
                 <ul>
-                  <li v-for="cartItem in cartObject" class="px-4 py-1 m-0">
+                  <li v-for="(cartItem, index) in cartObject" class="px-4 py-1 m-0">
                     <div class="card mb-3">
-                      <span class="fw-bold delete-item">X</span>
+                      <span class="fw-bold delete-item" @click="deleteItemCart(index)">X</span>
                       <div class="row g-0">
                         <div class="col-md-4 my-auto ps-2">
                           <img :src="getCartImageUrl(cartItem.urlImage)" class="img-fluid rounded-start"
