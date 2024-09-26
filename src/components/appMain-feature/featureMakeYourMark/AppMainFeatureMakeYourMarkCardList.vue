@@ -4,7 +4,23 @@ import AppMainFeatureMakeYourMarkCardListItem from './AppMainFeatureMakeYourMark
 export default {
   data(){
     return{
-
+        listGaming:[
+            {
+                title: 'Live Streaming',
+                description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labor.',
+                imgUrl: 'src/assets/icon/features-icon-1.png'
+            },
+            {
+                title: 'Great Tournament',
+                description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labor.',
+                imgUrl: 'src/assets/icon/features-icon-2.png'
+            },
+            {
+                title: 'Gaming News',
+                description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labor.',
+                imgUrl: 'src/assets/icon/features-icon-3.png'
+            }
+        ]
     }
   },
   components: {
