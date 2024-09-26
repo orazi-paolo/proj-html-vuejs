@@ -42,7 +42,7 @@ export default {
 <style lang="scss" scoped>
     .card-gaming{
         display: flex;
-        gap: 10px;
+        gap: 30px;
         
         
         .box-icon{
@@ -51,6 +51,10 @@ export default {
         .box-info{
             flex-grow: 1;
             color: #fff;
+            
+            h3, p{
+              margin-bottom: 20px;
+            }
         }
     }
 

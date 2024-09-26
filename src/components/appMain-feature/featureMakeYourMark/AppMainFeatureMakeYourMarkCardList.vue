@@ -48,6 +48,7 @@ export default {
  #list-gaming{
     list-style-type: none;
     padding-left: 0;
+    margin: 30px 0;
  }
 
 </style>
