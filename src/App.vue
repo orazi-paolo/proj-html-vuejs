@@ -27,5 +27,6 @@ export default {
 
 <style lang="scss">
 @use "/node_modules/bootstrap/scss/bootstrap.scss";
-@use "/src/style/general.scss"
+@use "/src/style/general.scss";
+@use '/node_modules/bootstrap-icons/font/bootstrap-icons.min.css'
 </style>

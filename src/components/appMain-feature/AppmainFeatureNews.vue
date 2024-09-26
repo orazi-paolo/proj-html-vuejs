@@ -1,6 +1,6 @@
 <script>
 import FeatureNewsList from './featureNews/FeatureNewsList.vue'
-import FeatureNewsListCard from './featureNews/FeatureNewsListCard.vue'
+import BaseSectionTitle from '../baseComponents/BaseSectionTitle.vue'
 export default {
   data() {
     return {
@@ -9,20 +9,28 @@ export default {
   },
   components: {
     FeatureNewsList,
-    FeatureNewsListCard
-
+    BaseSectionTitle
   }
 }
 </script>
 
 <template>
-    <h3>
-        feature news
-    </h3>
-    <FeatureNewsList />
-    <FeatureNewsListCard />
+    <section class="base-background pt-5">
+      <!-- create a container to add margins and padding to the sides -->
+      <div class="container">
+        <!-- I use a base component that was previously pre-configured -->
+           <BaseSectionTitle isCenter contentGreen="Latest News" mainTitle="Stay Updated With Our Latest News Articles" description="libero malesuada feugiat. Vivamus magna justo, lacinia eget consectetur sed, convailis at tellus. Cras ultricies ligula sed magna dictum porta." />
+      </div>
+      <!-- organize the cards in another component -->
+      <FeatureNewsList />
+    </section>
 
 </template>
 
-<style scoped>
+<style lang="scss" scoped>
+//Background color of the section
+  .base-background{
+    background-color: black;
+    padding-bottom: 200px;
+  }
 </style>

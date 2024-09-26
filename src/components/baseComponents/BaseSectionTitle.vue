@@ -1,9 +1,9 @@
 <script>
 export default {
-  data() {
+    data() {
         return {
-      
-    }
+
+        }
     },
     props: {
         isCenter: {
@@ -28,7 +28,7 @@ export default {
 </script>
 
 <template>
-    <div :class="isCenter ? 'text-center' : 'text-start'">
+    <div :class="{'text-center centralize' : isCenter}">
         <h5 class="subtitle">
             {{ contentGreen }}
         </h5>
@@ -43,16 +43,21 @@ export default {
 </template>
 
 <style lang="scss" scoped>
+.centralize{
+    margin: 0 auto;
+    width: 50%;
+}
 div{
-    background-color: black;
 
     .subtitle{
         color: #94CB53;
     }
-    h1{
-     color: white;
+
+    h1 {
+        color: white;
     }
-    p{
+
+    p {
         color: #EBEBEB;
     }
 }
