@@ -59,7 +59,7 @@ export default {
       height: 700px;
       position: absolute;
       top: 12%;
-      left: -12%;
+      left: -200px;
     }
   }
 </style>
