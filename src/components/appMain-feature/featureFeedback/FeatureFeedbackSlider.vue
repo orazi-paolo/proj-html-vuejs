@@ -39,6 +39,25 @@ export default {
   },
   components: {
     FeatureFeedbackSliderCard,
+  },
+
+  methods: {
+    shuffleProfiles() {
+      let middle = this.userProfiles[1]
+      let first = this.userProfiles[0]
+      // Change position of objects
+      this.userProfiles[0] = middle
+      this.userProfiles[1] = first
+
+      // Rivert the user profiles array
+      this.userProfiles.reverse()
+    }
+  },
+
+  mounted() {
+    setInterval(() => {
+      this.shuffleProfiles()
+    }, 2000)
   }
 }
 </script>
@@ -46,14 +65,33 @@ export default {
 <template>
   <!-- Feedback Slider  -->
   <div class="container">
-    <div class="row mt-5">
+    <TransitionGroup class="row mt-5 overflow-x-scroll" name="scroll" tag="div">
       <div class="col" v-for="profile in userProfiles" :key="profile.id">
         <FeatureFeedbackSliderCard :firstName="profile.firstName" :lastName="profile.lastName"
           :nationality="profile.nationality" :description="profile.description" :profileImgUrl="profile.profileImgUrl"
           :starsRate="profile.starsRate" />
       </div>
-    </div>
+    </TransitionGroup>
   </div>
 </template>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.scroll-move,
+/* apply transition to moving elements */
+.scroll-enter-active,
+.scroll-leave-active {
+  transition: all 0.5s ease;
+}
+
+.scroll-enter-from,
+.scroll-leave-to {
+  opacity: 0;
+  transform: translateX(30px);
+}
+
+/* ensure leaving items are taken out of layout flow so that moving
+   animations can be calculated correctly. */
+.scroll-leave-active {
+  position: absolute;
+}
+</style>
