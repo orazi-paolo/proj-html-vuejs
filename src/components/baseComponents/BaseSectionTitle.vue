@@ -1,9 +1,9 @@
 <script>
 export default {
-  data() {
+    data() {
         return {
-      
-    }
+
+        }
     },
     props: {
         isCenter: {
@@ -53,10 +53,12 @@ div{
     .subtitle{
         color: #94CB53;
     }
-    h1{
-     color: white;
+
+    h1 {
+        color: white;
     }
-    p{
+
+    p {
         color: #EBEBEB;
     }
 }
