@@ -5,10 +5,26 @@ export default {
   data() {
     return {
       listFacts:[
-        {title:'Twitch Streams'},
-        {title:'Total Games'},
-        {title:'Youtube Streams'},
-        {title:'Pro Team'}
+        {
+          title:'Twitch Streams',
+          min: 0,
+          max: 5500,
+        },
+        {
+          title:'Total Games',
+          min: 0,
+          max: 800,
+        },
+        {
+          title:'Youtube Streams',
+          min: 0,
+          max: 5500,
+        },
+        {
+          title:'Pro Team',
+          min: 0,
+          max: 500,
+        }
       ]
     }
   },
