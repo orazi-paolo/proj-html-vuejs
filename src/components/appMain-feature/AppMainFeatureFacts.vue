@@ -15,7 +15,8 @@ export default {
 <!-- AppMainFeatureFacts -->
 <template>
   <section class="facts-background">
-    <div class="container">
+    <div class="container wow animate__animated animate__fadeInUp"
+        data-wow-duration="1s">
       <h3 class="title-section">
         Futio Quick Facts
       </h3>

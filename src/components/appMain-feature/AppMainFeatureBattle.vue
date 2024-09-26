@@ -26,6 +26,8 @@ export default {
         mainTitle="Keep Eyes & Manage upcoming Battle"
         description="libero malesuada feugiat. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Cras ultricies ligula sed magna dictum porta."
         :isCenter='true'
+        class="wow animate__animated animate__fadeInUp"
+        data-wow-duration="1s" 
       />
       <AppMainFeatureBattleCardList /> 
       <div class="text-center">

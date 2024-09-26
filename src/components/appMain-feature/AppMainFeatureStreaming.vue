@@ -21,7 +21,9 @@ export default {
   <section class="p-5">
     <div class="container">
       <BaseSectionTitle contentGreen="Live Streaming" mainTitle="Watch the Streams" description="libero malesuada feugiat. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus.
-      Cras ultricies ligula sed magna dictum porta." is-center />
+      Cras ultricies ligula sed magna dictum porta." is-center
+      class="wow animate__animated animate__fadeInUp"
+        data-wow-duration="1s" />
     </div>
     <!-- Streaming video card -->
     <figure class="mx-auto my-5 position-relative">
