@@ -8,17 +8,17 @@ export default {
             {
                 title: 'Live Streaming',
                 description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labor.',
-                imgUrl: 'src/assets/icon/features-icon-1.png'
+                imgUrl: 'features-icon-1.png'
             },
             {
                 title: 'Great Tournament',
                 description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labor.',
-                imgUrl: 'src/assets/icon/features-icon-2.png'
+                imgUrl: 'features-icon-2.png'
             },
             {
                 title: 'Gaming News',
                 description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labor.',
-                imgUrl: 'src/assets/icon/features-icon-3.png'
+                imgUrl: 'features-icon-3.png'
             }
         ]
     }
@@ -45,6 +45,7 @@ export default {
 
  #list-gaming{
     list-style-type: none;
+    padding-left: 0;
  }
 
 </style>
