@@ -1,5 +1,6 @@
 <script>
 import BaseSectionTitle from './../baseComponents/BaseSectionTitle.vue'
+import AppMainFeatureMakeYourMarkCardList from './featureMakeYourMark/AppMainFeatureMakeYourMarkCardList.vue'
 
 export default {
   data() {
@@ -9,12 +10,14 @@ export default {
   },
   components:{
     BaseSectionTitle,
+    AppMainFeatureMakeYourMarkCardList,
 
   }
 }
 </script>
 
 <template>
+  <!-- AppMainFeatureMakeYourMark -->
   <div class="container">
     <div class="row-battle">
       <div class="col-battle-left"></div>
@@ -24,6 +27,7 @@ export default {
           mainTitle="Make Your Mark on the Battle Field"
           description="libero malesuada feugiat. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Cras ultricies ligula sed magna dictum porta."
         />
+        <AppMainFeatureMakeYourMarkCardList />
       </div>
     </div>
   </div>
