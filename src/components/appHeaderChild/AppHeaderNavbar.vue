@@ -80,10 +80,12 @@ export default {
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav">
             <li v-for="(nav, index) in navLink" class="link">
-              <a href="#" :class="(active === index) ? 'active' : ''">{{ nav.name }}</a>
+              <a href="#" :class="(active === index) ? 'active' : ''">{{ nav.name }} <span v-if="nav.internal"><img
+                    src="../../assets/svg/c-down-arrow.svg" alt=""></span></a>
               <div class="internal-link" v-if="nav.internal">
                 <ul>
-                  <li v-for="int in nav.internal" class="int"><a href="#">{{ int.intLink }}</a>
+                  <li v-for="int in nav.internal" class="int"><a href="#">{{ int.intLink }} <span v-if="int.sub"><img
+                          src="../../assets/svg/b-right-arrow.svg" alt=""></span></a>
                     <div class="sub-link" v-if="int.sub">
                       <ul class="sub">
                         <li v-for="sub in int.sub"><a href="#">{{ sub.subLink }}</a></li>
@@ -205,15 +207,21 @@ li {
   }
 }
 
-a {
+li a {
   color: white;
   font-family: "Orbitron", sans-serif;
   font-weight: bold;
 
   &:hover {
-    color: #94CB53
+    color: #94CB53;
+
+    img {
+      filter: invert(77%) sepia(18%) saturate(1178%) hue-rotate(44deg) brightness(94%) contrast(89%);
+    }
   }
 }
+
+
 
 .delete-item {
   display: none;
