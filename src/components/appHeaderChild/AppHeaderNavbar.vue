@@ -5,6 +5,7 @@ export default {
     return {
       scroll: false,
       active: 0,
+      cartNumber: "0",
       navLink: [
         {
           name: "Home",
@@ -29,6 +30,11 @@ export default {
           name: "Contact",
         }
       ],
+      cartObject: [
+        { name: "Havit RGB Headphones", urlImage: "shop-image-3.png", salePrice: "380.00", Price: "410.00" },
+        { name: "Touch Controller Grip", urlImage: "shop-image-5.png", salePrice: "380.00", Price: "410.00" },
+        { name: "Gamin Microphones", urlImage: "shop-image-8.png", salePrice: "380.00", Price: "410.00" },
+      ]
     }
   },
   components: {
@@ -45,6 +51,11 @@ export default {
   },
   mounted() {
     document.addEventListener('scroll', this.isPageScrolled)
+  },
+  computed: {
+    cartLength() {
+      this.cartObject.length < 10 ? this.cartNumber = '0' + this.cartObject.length : this.cartNumber = this.cartObject.length;
+    }
   }
 }
 </script>
@@ -75,7 +86,7 @@ export default {
           </ul>
           <div class="d-flex align-items-center">
             <div class="cart p-2 me-2"><img src="../../assets/icon/cart-icon.png" alt="cart"><span
-                class="number-object-cart">03</span></div>
+                class="number-object-cart" v-bind="cartLength">{{ cartNumber }}</span></div>
             <BaseButton contentButton="LIVE STREAMING" :isArrow="false" />
           </div>
         </div>
