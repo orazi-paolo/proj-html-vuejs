@@ -2,6 +2,7 @@
 export default {
   data() {
     return {
+      // create a object to store the data of newsLetter
       newsLetter: {
           imgButton: new URL ('../../assets/icon/send-icon.png', import.meta.url).href,
           title: 'Subscribe Newsletter',
@@ -13,6 +14,7 @@ export default {
 </script>
 
 <template>
+  <!-- create the structure of newsletter -->
   <section class="newsletter">
     <div class="container">
       <div class="row justify-content-center align-items-center">
