@@ -14,13 +14,29 @@ export default {
 }
 </script>
 
+<!-- AppMainFeatureFacts -->
 <template>
-  <h3>
-    feature facts
-  </h3>
-  <FeatureFactsCardList />
-  <FeatureFactsCardListItem />
+  <section class="facts-background">
+    <div class="container">
+      <h3 class="title-section">
+        Futio Quick Facts
+      </h3>
+      <FeatureFactsCardList />
+      <FeatureFactsCardListItem />
+    </div>
+  </section>
 </template>
 
-<style scoped>
+<style lang="scss" scoped>
+
+.facts-background{
+  background-color: #000;
+  padding: 100px;
+
+  .title-section{
+    color: #fff;
+    font-size: 50px;
+    text-align: center;
+  }
+}
 </style>
