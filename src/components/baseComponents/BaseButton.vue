@@ -1,9 +1,7 @@
 <script>
-import { store } from '../../store.js'
 export default {
   data() {
     return {
-      store,
     }
   },
   props: {
@@ -22,8 +20,8 @@ export default {
 
 <template>
   <div id="base-button">
-    <button class="fw-bold">
-      {{ contentButton }} <span v-if="isArrow"> >> </span>
+    <button class="fw-bold d-flex justify-content-center align-items-center">
+      {{ contentButton }} <span v-if="isArrow"> <img class="img-color ps-2" src="/src/assets/svg/e-double-right-arrow.svg" alt="arrows-right"> </span>
     </button>
   </div>
 </template>
@@ -51,6 +49,9 @@ export default {
     padding: 10px 15px;
     background-color: #08CB7B;
     transition: background-color 0.3s;
+    .img-color{
+      filter: invert(1);
+    }
   }
 }
 </style>
