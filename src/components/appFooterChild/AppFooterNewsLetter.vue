@@ -32,7 +32,7 @@ export default {
               </div>
               <div class="col-5">
                 <div class="form-group input-area d-flex align-items-center">
-                  <input type="text" placeholder="Enter your email">
+                  <input type="text" placeholder="Enter your email" name="input-email">
                   <button class="btn-area">
                     <a href="#header" class="transition-link">
                       <img :src="newsLetter.imgButton" alt="send">

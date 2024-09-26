@@ -20,7 +20,8 @@ export default {
   <section class="bg-black p-5">
     <!-- Discount Title  -->
     <div
-      class="container discount-title d-flex flex-column justify-content-center align-items-center text-white rounded-3 position-relative p-3  overflow-y-hidden">
+      class="container discount-title d-flex flex-column justify-content-center align-items-center text-white rounded-3 position-relative p-3  overflow-y-hidden wow animate__animated animate__fadeInUp"
+        data-wow-duration="1s">
       <h6>Make Offer</h6>
       <h1>Get {{ this.offer }}% Offer discount</h1>
       <!-- Phone img  -->

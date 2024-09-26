@@ -25,10 +25,6 @@ export default {
 </script>
 
 <template>
-
-    <h1>
-        Io sono AppMain
-    </h1>
     <AppMainFeatureMakeYourMark />
     <AppMainFeatureBattle />
     <AppMainFeatureFacts />

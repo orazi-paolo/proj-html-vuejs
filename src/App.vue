@@ -2,6 +2,7 @@
 import AppHeader from './components/AppHeader.vue';
 import AppMain from './components/AppMain.vue';
 import AppFooter from './components/AppFooter.vue';
+import AppLoader from './components/AppLoader.vue';
 import 'animate.css'
 import WOW from 'wow.js'
 
@@ -10,22 +11,32 @@ new WOW().init()
 export default {
   data() {
     return {
-
+      loading: true
     }
   },
   components: {
     AppHeader,
     AppMain,
-    AppFooter
+    AppFooter,
+    AppLoader
+  },
+  mounted() {
+    setTimeout(() => {
+      this.loading = false;
+    }, 2000)
   }
 }
 </script>
 
 <template>
-
-  <AppHeader />
-  <AppMain />
-  <AppFooter />
+  <div v-if="loading">
+    <AppLoader />
+  </div>
+  <div v-else>
+    <AppHeader />
+    <AppMain />
+    <AppFooter />
+  </div>
 
 </template>
 
