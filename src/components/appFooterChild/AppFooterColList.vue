@@ -1,22 +1,32 @@
 <script>
-import AppFooterColListItem from'./AppFooterColListItem.vue'
 export default {
   data() {
     return {
       
     }
   },
-  components: {
-    AppFooterColListItem
+  props: {
+    title: {
+      type: String,
+      required: true
+    },
+    items: {
+      type: Array,
+      required: true
+    }
   }
 }
 </script>
 
 <template>
-    <h3>
-        footer col list 
-    </h3>
-    <AppFooterColListItem />
+  <div class="col-2">
+    <h5>
+      {{ title }}
+    </h5>
+    <ul>
+      <li v-for="item in items" :key="item"> {{ item }}</li>
+    </ul>
+  </div>
 </template>
 
 <style scoped>

@@ -56,7 +56,7 @@ export default {
 
     .footer-form{
       border-radius: 30px;
-      background-color: #30405f;
+      background-color: #30455f;
       padding: 80px 60px 72px;
 
       .title{
@@ -72,7 +72,7 @@ export default {
       }
       .input-area{
         background-color: #425374;
-        outline: 1px solid #556f9c;
+        outline: 1px solid #30455f;
         border-radius: 10px;
         input{
           margin: 4px;
