@@ -9,10 +9,30 @@ export default {
     }
   },
   props: {
-    userProfiles: {
-      type: Array,
+    firstName: {
+      type: String,
       required: true,
-    }
+    },
+    lastName: {
+      type: String,
+      required: true,
+    },
+    nationality: {
+      type: String,
+      required: true,
+    },
+    profileImgUrl: {
+      type: String,
+      required: true,
+    },
+    description: {
+      type: String,
+      required: true,
+    },
+    starsRate: {
+      type: Number,
+      required: true,
+    },
   },
   components: {
     ProfileCard,
@@ -21,21 +41,16 @@ export default {
 </script>
 
 <template>
-  <div class="container">
-    <div class="row">
-      <div class="col" v-for="profile in userProfiles" :key="profile.id">
-        <div class="card text-white p-3">
-          <!-- Stars rate  -->
-          <div class="stars-rate d-flex gap-1">
-            <i class="bi bi-star-fill" v-for="i in profile.starsRate" :key="i"></i>
-          </div>
-          <!-- Description  -->
-          <p class="mt-2">"{{ profile.description }}"</p>
-          <ProfileCard :firstName="profile.firstName" :lastName="profile.lastName"
-            :profileImgUrl="profile.profileImgUrl" :nationality="profile.nationality" />
-        </div>
-      </div>
+  <!-- FeedBack Card -->
+  <div class="card text-white p-3">
+    <!-- Stars rate  -->
+    <div class="stars-rate d-flex gap-1">
+      <i class="bi bi-star-fill" v-for="i in starsRate" :key="i"></i>
     </div>
+    <!-- Description  -->
+    <p class="mt-2">"{{ description }}"</p>
+    <ProfileCard :firstName="firstName" :lastName="lastName" :profileImgUrl="profileImgUrl"
+      :nationality="nationality" />
   </div>
 </template>
 

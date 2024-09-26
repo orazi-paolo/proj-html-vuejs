@@ -44,7 +44,16 @@ export default {
 </script>
 
 <template>
-  <FeatureFeedbackSliderCard :userProfiles="userProfiles" />
+  <!-- Feedback Slider  -->
+  <div class="container">
+    <div class="row mt-5">
+      <div class="col" v-for="profile in userProfiles" :key="profile.id">
+        <FeatureFeedbackSliderCard :firstName="profile.firstName" :lastName="profile.lastName"
+          :nationality="profile.nationality" :description="profile.description" :profileImgUrl="profile.profileImgUrl"
+          :starsRate="profile.starsRate" />
+      </div>
+    </div>
+  </div>
 </template>
 
 <style lang="scss" scoped></style>
