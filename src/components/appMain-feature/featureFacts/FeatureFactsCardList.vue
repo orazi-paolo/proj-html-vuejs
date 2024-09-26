@@ -4,7 +4,12 @@ import FeatureFactsCardListItem from './FeatureFactsCardListItem.vue'
 export default {
   data() {
     return {
-      
+      listFacts:[
+        {title:'Twitch Streams'},
+        {title:'Total Games'},
+        {title:'Youtube Streams'},
+        {title:'Pro Team'}
+      ]
     }
   },
   components: {
