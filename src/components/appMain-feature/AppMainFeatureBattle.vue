@@ -16,12 +16,27 @@ export default {
 </script>
 
 <template>
-  <h3>
-    feature battle
-  </h3>
-  <AppMainFeatureBattleCardList />
-  <AppMainFeatureBattleCardListItem />
+  <div class="container">
+    <div class="row-battle">
+      <div class="col-battle-left"></div>
+      <div class="col-battle-right">
+        <AppMainFeatureBattleCardList />
+        <AppMainFeatureBattleCardListItem />
+      </div>
+    </div>
+  </div>
+ 
 </template>
 
-<style scoped>
+<style lang="scss">
+  .row-battle{
+    display: flex;
+
+  .col-battle-left{
+  flex-basis: 40%;
+  }
+  .col-battle-rifght{
+  flex-basis: 60%;
+  }
+  }
 </style>
