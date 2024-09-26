@@ -19,7 +19,7 @@ export default {
 <template>
   <!-- Streaming section  -->
   <section class="p-5">
-    <div class="container w-50">
+    <div class="container">
       <BaseSectionTitle contentGreen="Live Streaming" mainTitle="Watch the Streams" description="libero malesuada feugiat. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus.
       Cras ultricies ligula sed magna dictum porta." is-center />
     </div>
@@ -46,7 +46,6 @@ export default {
         </div>
       </div>
     </figure>
-
   </section>
 </template>
 
