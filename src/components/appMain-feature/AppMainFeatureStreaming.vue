@@ -1,6 +1,7 @@
 <script>
 // Import Component
 import BaseSectionTitle from "../baseComponents/BaseSectionTitle.vue"
+import PlayButton from "../baseComponents/PlayButton.vue";
 
 export default {
   data() {
@@ -10,6 +11,7 @@ export default {
   },
   components: {
     BaseSectionTitle,
+    PlayButton
   }
 }
 </script>
@@ -30,11 +32,7 @@ export default {
       </div>
       <div
         class="play-container text-white gap-2 d-flex flex-column justify-content-center align-items-center position-absolute">
-        <div class="play-btn p-2" role="btn">
-          <div class="play-icon bg-white d-flex justify-content-center align-items-center">
-            <img src="../../assets/icon/play-icon.png" alt="play-icon">
-          </div>
-        </div>
+        <PlayButton />
         <h5>League of Legends</h5>
       </div>
       <div class="feedback d-inline-flex gap-4 position-absolute">
@@ -79,31 +77,19 @@ section {
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
-
-      .play-btn {
-        border-radius: 50%;
-        border: 1px solid #06CB7B;
-
-        .play-icon {
-          width: 50px;
-          height: 50px;
-          border-radius: 50%;
-        }
-      }
-
     }
 
-    .feedback {
-      font-size: 10px;
-      color: white;
-      left: 30px;
-      bottom: 30px;
+  }
 
-      .nr {
-        color: #94CB53;
-      }
+  .feedback {
+    font-size: 10px;
+    color: white;
+    left: 30px;
+    bottom: 30px;
+
+    .nr {
+      color: #94CB53;
     }
-
   }
 
 }
