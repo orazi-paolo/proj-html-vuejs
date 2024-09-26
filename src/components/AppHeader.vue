@@ -25,7 +25,7 @@ export default {
 
 <style scoped>
 header {
-  height: 800px;
+  height: 900px;
   background-image: url(../assets/index-banner-bg.png);
   background-size: cover;
 }

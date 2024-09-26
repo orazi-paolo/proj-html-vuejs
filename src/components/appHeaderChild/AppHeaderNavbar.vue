@@ -60,7 +60,7 @@ export default {
 
   },
   mounted() {
-    document.addEventListener('scroll', this.isPageScrolled)
+    window.addEventListener('scroll', this.isPageScrolled)
   },
   computed: {
     cartLength() {
@@ -100,14 +100,14 @@ export default {
             <div class="cart position-relative p-2 me-2">
               <div @click="isShowCart()">
                 <img src="../../assets/icon/cart-icon.png" alt="cart">
-                <span class="number-object-cart" v-bind="cartLength" v-if="cartObject.length">
+                <p class="number-object-cart" v-bind="cartLength" v-if="cartObject.length">
                   {{ cartNumber }}
-                </span>
+                </p>
               </div>
-              <div class="visual-cart" :class="showCart ? 'd-block' : 'd-none'" v-if="cartObject.length">
+              <div class="visual-cart" :class="showCart ? 'active' : ''" v-if="cartObject.length">
                 <div class="info-cart px-4 d-flex justify-content-between">
                   <h3>Cart</h3>
-                  <span>{{ cartNumber }}</span>
+                  <p>{{ cartNumber }}</p>
                 </div>
                 <ul>
                   <li v-for="(cartItem, index) in cartObject" class="px-4 py-1 m-0">
@@ -143,9 +143,16 @@ export default {
 
 <style lang="scss" scoped>
 ul {
+  font-size: 18px;
   list-style-type: none;
   padding: 0;
   margin: 0;
+}
+
+.cart .active {
+  transform: translateY(-150px);
+  visibility: visible;
+  opacity: 1;
 }
 
 .visual-cart {
@@ -153,7 +160,11 @@ ul {
   width: 350px;
   position: absolute;
   right: 0;
-  top: 250%;
+  top: 550%;
+  transform: translateY(0px);
+  transition: 0.4s;
+  visibility: hidden;
+  opacity: 0;
   border-radius: 5px;
 
   &,
@@ -240,6 +251,13 @@ li .active {
 }
 
 
+#header-nav {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+
+}
 
 #header-nav .nav-fixed {
   background-color: #30405F;

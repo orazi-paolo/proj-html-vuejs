@@ -21,5 +21,6 @@ export default {
 <style scoped>
 div {
   color: white;
+  padding-top: 80px;
 }
 </style>
