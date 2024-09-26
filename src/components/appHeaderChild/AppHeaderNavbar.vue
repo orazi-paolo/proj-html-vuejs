@@ -33,7 +33,7 @@ export default {
       cartObject: [
         { name: "Havit RGB Headphones", urlImage: "shop-image-3.png", salePrice: "380.00", price: "410.00" },
         { name: "Touch Controller Grip", urlImage: "shop-image-5.png", salePrice: "380.00", price: "410.00" },
-        { name: "Gamin Microphones", urlImage: "shop-image-8.png", salePrice: "380.00", price: "410.00" },
+        { name: "Gaming Microphones", urlImage: "shop-image-8.png", salePrice: "380.00", price: "410.00" },
       ]
     }
   },
@@ -100,9 +100,10 @@ export default {
                 </div>
                 <ul>
                   <li v-for="cartItem in cartObject" class="px-4 py-1 m-0">
-                    <div class="card mb-3" style="max-width: 540px;">
+                    <div class="card mb-3">
+                      <span class="fw-bold delete-item">X</span>
                       <div class="row g-0">
-                        <div class="col-md-4">
+                        <div class="col-md-4 my-auto ps-2">
                           <img :src="getCartImageUrl(cartItem.urlImage)" class="img-fluid rounded-start"
                             :alt="cartItem.name">
                         </div>
@@ -203,6 +204,18 @@ a {
   &:hover {
     color: #94CB53
   }
+}
+
+.delete-item {
+  display: none;
+  position: absolute;
+  right: 0;
+  top: -10px;
+}
+
+.card:hover .delete-item {
+  display: inline;
+  color: #94CB53;
 }
 
 li .active {
