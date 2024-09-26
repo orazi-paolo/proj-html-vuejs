@@ -17,7 +17,7 @@ export default {
 </script>
 
 <template>
-  <header>
+  <header id="header">
     <AppHeaderNavbar />
     <AppHeaderSection />
   </header>

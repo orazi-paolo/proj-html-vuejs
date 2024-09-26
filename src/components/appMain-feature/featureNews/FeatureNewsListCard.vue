@@ -29,14 +29,14 @@ export default {
 <template>
   <!-- compose the cards using the props received from the parent -->
         <div class="card bg-dark text-white mb-4 d-flex flex-row">
-            <img class="img-card-news" :src="image" :alt="title">
+            <img class="img-card-news pointer" :src="image" :alt="title">
             <div class="card-body">
               <div class="metadata">
                 <span class="pe-3"><span><img class="pe-1" src="../../../assets/icon/clock.png" alt="icon clock"></span>{{ clock }}</span>
                 <span class="pe-3"><span><img class="pe-1" src="../../../assets/icon/eye.png" alt="icon eye"></span>{{ visual }}</span>
                 <span class="pe-3"><span><img class="pe-1" src="../../../assets/icon/calendar.png" alt="icon calendar"></span>{{ date }}</span>
               </div>
-              <h5 class="card-title mt-2">{{ title }}</h5>
+              <h5 class="card-title mt-2 pointer">{{ title }}</h5>
             </div>
         </div>
 </template>

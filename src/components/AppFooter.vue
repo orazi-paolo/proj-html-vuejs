@@ -79,9 +79,10 @@ ul li a{
   border: 1px solid gray;
   border-radius: 50%;
   padding: 10px;
+  transition: background-color 0.3s, border-color 0.3s;
   &:hover{
-    color: #94CB53;
     border-color: #94CB53;
+    background-color: #94CB53;
   }
 }
 span{

@@ -39,6 +39,7 @@ li{
     color: rgba(211, 211, 211, 0.437);
     font-size: 14px;
     text-decoration: none;
+    transition: color 0.3s;
     &:hover{
       color: #94CB53;
     }
