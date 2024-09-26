@@ -21,7 +21,7 @@ export default {
 </script>
 
 <template>
-  <div>
+  <div id="base-button">
     <button class="fw-bold">
       {{ contentButton }} <span v-if="isArrow"> >> </span>
     </button>
@@ -29,23 +29,26 @@ export default {
 </template>
 
 <style lang="scss" scoped>
-div{
+#base-button {
   display: inline-block;
   padding: 5px;
-  border: 2px solid #08CB7B;
-  border-radius: 30px ;
-  &:hover{
+  border: 1px solid #08CB7B;
+  border-radius: 30px;
+
+  &:hover {
     border-color: #94CB53;
-  }
-  :hover button{
-    background-color: #94CB53;
+
+    button {
+      background-color: #94CB53;
+    }
   }
 
-    button{
-      border: none;
-      border-radius: 30px;
-      padding: 10px 15px;
-      background-color: #08CB7B;
-    }
+
+  button {
+    border: none;
+    border-radius: 30px;
+    padding: 10px 15px;
+    background-color: #08CB7B;
+  }
 }
 </style>
