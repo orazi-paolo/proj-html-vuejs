@@ -61,9 +61,9 @@ export default {
 <style lang='scss'scoped>
 .card-battle{
   background-color: #fff;
-  border: 1px solid blue;
+  border: 2px solid #3B5171;
   overflow: hidden;
-  border-radius: 40px;
+  border-radius: 20px;
   flex-basis: calc(50% - 20px/2);
 
   .battle, .info, .links{
@@ -77,12 +77,27 @@ export default {
 
   .info{
     padding: 30px 0;
-    background-color: #fff;
+    background-color: #2D405E;
+   
+    h4{
+      color: #fff;
+    }
+    p{
+      color: #94CB53;
+    }
   }
 
   .links{
     padding: 40px 0;
     background-color: #283449;
+    color: #fff;
+    
+    img{
+      margin-right: 5px;
+    }
+    span{
+      margin-right: 25px;
+    }
   }
 }
 </style>
