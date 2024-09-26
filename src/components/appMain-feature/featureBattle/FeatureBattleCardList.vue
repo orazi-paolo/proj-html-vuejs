@@ -34,13 +34,21 @@ export default {
 }
 </script>
 
+<!-- FeatureBattleCardList -->
 <template>
-  <ul>
+  <ul id="list-battles">
+    <!-- sended by props to AppMainFeatureBattleCardListItem the items(battle) of listBattles[] with v-for-->
     <AppMainFeatureBattleCardListItem 
       v-for="(battle, index) in listBattles" :key="index" :battle="battle"
     />  
   </ul>
 </template>
 
-<style scoped>
+<style lang="scss" scoped>
+  #list-battles{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
 </style>
