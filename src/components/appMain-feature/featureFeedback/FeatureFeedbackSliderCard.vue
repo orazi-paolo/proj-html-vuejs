@@ -55,7 +55,6 @@ export default {
 </template>
 
 <style lang="scss" scoped>
-@use "/node_modules/bootstrap-icons/font/bootstrap-icons.css";
 
 .card {
   background-color: #30405F;
