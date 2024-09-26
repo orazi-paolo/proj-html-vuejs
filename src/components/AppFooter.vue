@@ -21,7 +21,8 @@ export default {
 <template>
   <footer class="bg-footer text-white">
     <AppFooterNewsLetter />
-    <div class="container">
+    <div class="container wow animate__animated animate__fadeInUp"
+  data-wow-duration="1s">
       <div class="row">
         <div class="col-4">
           <a href="#">
@@ -55,9 +56,12 @@ export default {
             </ul>
           </div>
         </div>
-          <AppFooterColList title="Quick Links" :items="quickLinks" />
-          <AppFooterColList title="Help" :items="helpLinks" />
-          <AppFooterColList title="Follow Us" :items="followUsLinks"/>
+          <AppFooterColList  title="Quick Links" :items="quickLinks" class="wow animate__animated animate__fadeInUp"
+  data-wow-duration="1s" />
+          <AppFooterColList title="Help" :items="helpLinks" class="wow animate__animated animate__fadeInUp"
+  data-wow-duration="1s"/>
+          <AppFooterColList title="Follow Us" :items="followUsLinks" class="wow animate__animated animate__fadeInUp"
+  data-wow-duration="1s"/>
           <div class="col-2">
             <h5>Contacts</h5>
             <p><span>Location:</span> <br> 4 Mayfield, Buckden, PE19 5SZ</p>
@@ -65,7 +69,8 @@ export default {
           </div>
       </div>
     </div>
-    <AppFooterCopyright />
+    <AppFooterCopyright class="wow animate__animated animate__fadeInUp"
+  data-wow-duration="1s" />
   </footer>
 
 </template>
