@@ -49,6 +49,7 @@ export default {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
+    margin: 60px;
   }
 
 </style>
