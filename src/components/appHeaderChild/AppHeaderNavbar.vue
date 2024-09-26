@@ -3,17 +3,26 @@ import BaseButton from "../baseComponents/BaseButton.vue"
 export default {
   data() {
     return {
-
+      scroll: false,
     }
   },
   components: {
     BaseButton
+  },
+  methods: {
+    isPageScrolled() {
+      this.scroll = !this.scroll
+    },
+
+  },
+  mounted() {
+    window.addEventListener('scroll', this.isPageScrolled)
   }
 }
 </script>
 
 <template>
-  <nav class="navbar navbar-expand-lg">
+  <nav class="navbar navbar-expand-lg" :class="{ 'nav-fixed': scroll } || { '': !scroll }">
     <div class="container">
       <a class="navbar-brand" href="#">
         <img src="../../assets/logo.png" alt="Logo Futio" class="d-inline-block align-text-top">
@@ -47,5 +56,14 @@ export default {
 a {
   color: white;
   font-family: "Orbitron", sans-serif;
+}
+
+.nav-fixed {
+  background-color: #30405F;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: 1;
 }
 </style>
