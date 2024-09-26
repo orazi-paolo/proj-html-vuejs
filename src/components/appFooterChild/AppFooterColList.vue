@@ -20,14 +20,28 @@ export default {
 
 <template>
   <div class="col-2">
-    <h5>
+    <h5 class="mb-3">
       {{ title }}
     </h5>
-    <ul>
-      <li v-for="item in items" :key="item"> {{ item }}</li>
+    <ul class="list-unstyled">
+      <li v-for="item in items" :key="item" class="mb-2">
+         <a href="">
+            {{ item }}
+         </a>
+        </li>
     </ul>
   </div>
 </template>
 
-<style scoped>
+<style lang="scss" scoped>
+li{
+  a{
+    color: rgba(211, 211, 211, 0.437);
+    font-size: 14px;
+    text-decoration: none;
+    &:hover{
+      color: #94CB53;
+    }
+  }
+}
 </style>

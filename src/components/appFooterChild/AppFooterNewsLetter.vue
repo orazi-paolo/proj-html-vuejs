@@ -56,7 +56,7 @@ export default {
 
     .footer-form{
       border-radius: 30px;
-      background-color: #30455f;
+      background-color: #30405F;
       padding: 80px 60px 72px;
 
       .title{
