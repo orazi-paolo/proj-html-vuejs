@@ -8,6 +8,7 @@ export default {
 }
 </script>
 
+<!-- FeatureFactsCardListItem -->
 <template>
 
     <h5>

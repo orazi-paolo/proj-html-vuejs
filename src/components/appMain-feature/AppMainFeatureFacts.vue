@@ -1,6 +1,5 @@
 <script>
 import FeatureFactsCardList from './featureFacts/FeatureFactsCardList.vue'
-import FeatureFactsCardListItem from './featureFacts/FeatureFactsCardListItem.vue'
 export default {
   data() {
     return {
@@ -8,8 +7,7 @@ export default {
     }
   },
   components: {
-    FeatureFactsCardList,
-    FeatureFactsCardListItem
+    FeatureFactsCardList
   }
 }
 </script>
@@ -22,7 +20,6 @@ export default {
         Futio Quick Facts
       </h3>
       <FeatureFactsCardList />
-      <FeatureFactsCardListItem />
     </div>
   </section>
 </template>

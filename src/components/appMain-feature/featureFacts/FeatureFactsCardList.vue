@@ -1,18 +1,23 @@
 <script>
+import FeatureFactsCardListItem from './FeatureFactsCardListItem.vue'
+
 export default {
   data() {
     return {
       
     }
+  },
+  components: {
+    FeatureFactsCardListItem
   }
 }
 </script>
 
+<!-- FeatureFactsCardList -->
 <template>
-    <h4>
-        card list
-    </h4>
-
+  <ul>
+    <FeatureFactsCardListItem />
+  </ul>
 </template>
 
 <style scoped>
