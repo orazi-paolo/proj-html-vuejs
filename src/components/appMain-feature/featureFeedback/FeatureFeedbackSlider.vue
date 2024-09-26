@@ -65,7 +65,7 @@ export default {
 <template>
   <!-- Feedback Slider  -->
   <div class="container">
-    <TransitionGroup class="row mt-5 overflow-x-scroll" name="scroll" tag="div">
+    <TransitionGroup class="row mt-5" name="scroll" tag="div">
       <div class="col" v-for="profile in userProfiles" :key="profile.id">
         <FeatureFeedbackSliderCard :firstName="profile.firstName" :lastName="profile.lastName"
           :nationality="profile.nationality" :description="profile.description" :profileImgUrl="profile.profileImgUrl"
