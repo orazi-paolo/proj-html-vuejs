@@ -6,7 +6,7 @@ import BaseButton from './../baseComponents/BaseButton.vue'
 export default {
   data() {
     return {
-      
+      imgUrl: 'features-illus.png'
     }
   },
   components:{
@@ -19,32 +19,46 @@ export default {
 
 <template>
   <!-- AppMainFeatureMakeYourMark -->
-  <div class="container">
-    <div class="row-battle">
-      <div class="col-battle-left"></div>
-      <div class="col-battle-right">
-        <BaseSectionTitle 
-          contentGreen="The Ultimate Competitive Gaming Platfrom" 
-          mainTitle="Make Your Mark on the Battle Field"
-          description="libero malesuada feugiat. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Cras ultricies ligula sed magna dictum porta."
-        />
-        <AppMainFeatureMakeYourMarkCardList />
-        <BaseButton contentButton="PLAN NOW"/>
+  <div class="background">
+    <div class="container">
+      <div class="row-battle">
+        <div class="col-battle-left"></div>
+        <div class="col-battle-right">
+          <BaseSectionTitle 
+            contentGreen="The Ultimate Competitive Gaming Platfrom" 
+            mainTitle="Make Your Mark on the Battle Field"
+            description="libero malesuada feugiat. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Cras ultricies ligula sed magna dictum porta."
+          />
+          <AppMainFeatureMakeYourMarkCardList />
+          <BaseButton contentButton="PLAN NOW"/>
+        </div>
       </div>
     </div>
+    <img class="img-gamer" :src="`../..//src/assets/${imgUrl}`" :alt="imgUrl">
   </div>
 </template>
 
 <style lang="scss">
-  .row-battle{
-    display: flex;
-    justify-content: space-between;
+  .background{
+    background-color: #000;
+    padding: 100px 0;
+    position: relative;
+    .row-battle{
+      display: flex;
+      justify-content: space-between;
 
-    .col-battle-left{
-    flex-basis: 40%;
+      .col-battle-left{
+      flex-basis: 40%;
+      }
+      .col-battle-right{
+      flex-basis: 50%;
+      }
     }
-    .col-battle-right{
-    flex-basis: 60%;
+    img.img-gamer{
+      height: 600px;
+      position: absolute;
+      top: 12%;
+      left: -22%;
     }
   }
 </style>
