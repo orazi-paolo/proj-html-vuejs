@@ -24,12 +24,16 @@ export default {
 
 <!-- AppMainFeatureMakeYourMarkCardListItem -->
 <template>
+    <!-- li of the single card-gaming(item) -->
     <li class="card-gaming">
         <div class="box-icon">
+            <!-- img of the icon of the single item -->
             <img :src="getImagePath(item.imgUrl)" :alt="item.imgUrl">
         </div>
         <div class="box-info">
+            <!-- title of the single item -->
             <h3>{{ item.title }}</h3>
+             <!-- description of the single item -->
             <p>{{ item.description }}</p>
         </div>
     </li>

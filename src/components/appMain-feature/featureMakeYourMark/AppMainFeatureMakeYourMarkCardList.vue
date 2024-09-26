@@ -34,7 +34,9 @@ export default {
 
 <!-- AppMainFeatureMakeYourMarkCardList -->
 <template>
+    <!-- list-gaming with v-for and props sended -->
     <ul id="list-gaming">
+        <!-- sended by props to AppMainFeatureMakeYourMarkCardListItem the items of listGaming[] with v-for-->
         <AppMainFeatureMakeYourMarkCardListItem 
             v-for="(item, index) in listGaming" :key="index" :item="item"
         />

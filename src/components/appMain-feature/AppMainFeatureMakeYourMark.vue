@@ -17,9 +17,9 @@ export default {
 }
 </script>
 
+<!-- AppMainFeatureMakeYourMark -->
 <template>
-  <!-- AppMainFeatureMakeYourMark -->
-  <div class="background">
+  <section class="makeYourMark-background">
     <div class="container">
       <div class="row-battle">
         <div class="col-battle-left"></div>
@@ -34,12 +34,13 @@ export default {
         </div>
       </div>
     </div>
+    <!-- main img in position absolute -->
     <img class="img-gamer" :src="`../..//src/assets/${imgUrl}`" :alt="imgUrl">
-  </div>
+  </section>
 </template>
 
 <style lang="scss">
-  .background{
+  .makeYourMark-background{
     background-color: #000;
     padding: 100px 0;
     position: relative;
