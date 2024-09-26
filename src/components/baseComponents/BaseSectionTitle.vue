@@ -48,7 +48,6 @@ export default {
     width: 50%;
 }
 div{
-    background-color: black;
 
     .subtitle{
         color: #94CB53;
