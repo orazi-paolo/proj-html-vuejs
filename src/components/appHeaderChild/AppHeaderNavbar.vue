@@ -4,6 +4,7 @@ export default {
   data() {
     return {
       scroll: false,
+      active: 0,
       navLink: [
         {
           name: "Home",
@@ -37,6 +38,9 @@ export default {
     isPageScrolled() {
       this.scroll = true
     },
+    isActive(i) {
+      this.active = i
+    }
 
   },
   mounted() {
@@ -54,14 +58,14 @@ export default {
         </a>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav">
-            <li v-for="nav in navLink" class="link">
-              <a class="nav-link" href="#">{{ nav.name }}</a>
+            <li v-for="(nav, index) in navLink" class="link" @click="isActive(index)">
+              <a href="#" :class="(active === index) ? 'active' : ''">{{ nav.name }}</a>
               <div class="internal-link" v-if="nav.internal">
                 <ul>
-                  <li v-for="int in nav.internal" class="int"><a class="nav-link" href="#">{{ int.intLink }}</a>
+                  <li v-for="int in nav.internal" class="int"><a href="#">{{ int.intLink }}</a>
                     <div class="sub-link" v-if="int.sub">
                       <ul class="sub">
-                        <li v-for="sub in int.sub"><a class="nav-link" href="#">{{ sub.subLink }}</a></li>
+                        <li v-for="sub in int.sub"><a href="#">{{ sub.subLink }}</a></li>
                       </ul>
                     </div>
                   </li>
@@ -83,6 +87,7 @@ export default {
 <style lang="scss" scoped>
 li {
   position: relative;
+  margin: 15px 15px 5px 0;
 }
 
 #header-nav .navbar-nav {
@@ -121,12 +126,18 @@ li {
 a {
   color: white;
   font-family: "Orbitron", sans-serif;
+  font-weight: bold;
 
-  &:hover,
-  li .active {
+  &:hover {
     color: #94CB53
   }
 }
+
+li .active {
+  color: #94CB53
+}
+
+
 
 #header-nav .nav-fixed {
   background-color: #30405F;
@@ -139,6 +150,10 @@ a {
 
 .collapse {
   justify-content: flex-end;
+
+  li a {
+    text-decoration: none;
+  }
 
   .cart {
     position: relative;
