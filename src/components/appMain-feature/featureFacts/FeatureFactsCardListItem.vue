@@ -13,7 +13,7 @@ export default {
   },
   methods:{
     // function that generates a random number from min to max
-    getRandomNumber(min = 0, max){
+    getRandomNumber(min, max){
       // generate the random number
       let result = Math.floor(Math.random() * (max + 1 -min)) + min;
       return result;
@@ -21,17 +21,17 @@ export default {
 
     getIncreaseNumber(){
       // call getRandomNumber
-      this.incrementedNumber = this.getRandomNumber(1, 10); // esempio con min 1 e max 10
+      this.incrementedNumber = this.getRandomNumber(this.fact.min, this.fact.max);
 
-      // start incrementing the number every 50ms
+      // start incrementing the number every 25ms
       const increaseNumber = setInterval(() => {
-        this.incrementedNumber++; // Aggiorno il numero reattivamente
-      }, 50);
+        this.incrementedNumber++; 
+      }, 25);
 
-      // after 1.5 seconds, the increment stops
+      // after 2.5 seconds, the increment stops
       setTimeout(() => {
         clearInterval(increaseNumber);
-      }, 1500);
+      }, 2500);
     }
   },
   mounted(){
