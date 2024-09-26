@@ -1,6 +1,7 @@
 <script>
 import BaseSectionTitle from './../baseComponents/BaseSectionTitle.vue'
 import AppMainFeatureMakeYourMarkCardList from './featureMakeYourMark/AppMainFeatureMakeYourMarkCardList.vue'
+import BaseButton from './../baseComponents/BaseButton.vue'
 
 export default {
   data() {
@@ -11,7 +12,7 @@ export default {
   components:{
     BaseSectionTitle,
     AppMainFeatureMakeYourMarkCardList,
-
+    BaseButton,
   }
 }
 </script>
@@ -28,6 +29,7 @@ export default {
           description="libero malesuada feugiat. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Cras ultricies ligula sed magna dictum porta."
         />
         <AppMainFeatureMakeYourMarkCardList />
+        <BaseButton contentButton="PLAN NOW"/>
       </div>
     </div>
   </div>
