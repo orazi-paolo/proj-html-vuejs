@@ -79,7 +79,7 @@ export default {
         </a>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav">
-            <li v-for="(nav, index) in navLink" class="link">
+            <li v-for="(nav, index) in navLink" class="link" @click="isActive(index)">
               <a href="#" :class="(active === index) ? 'active' : ''">{{ nav.name }} <span v-if="nav.internal"><img
                     src="../../assets/svg/c-down-arrow.svg" alt=""></span></a>
               <div class="internal-link" v-if="nav.internal">
