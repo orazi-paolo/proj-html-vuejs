@@ -31,9 +31,9 @@ export default {
         }
       ],
       cartObject: [
-        { name: "Havit RGB Headphones", urlImage: "shop-image-3.png", salePrice: "380.00", Price: "410.00" },
-        { name: "Touch Controller Grip", urlImage: "shop-image-5.png", salePrice: "380.00", Price: "410.00" },
-        { name: "Gamin Microphones", urlImage: "shop-image-8.png", salePrice: "380.00", Price: "410.00" },
+        { name: "Havit RGB Headphones", urlImage: "shop-image-3.png", salePrice: "380.00", price: "410.00" },
+        { name: "Touch Controller Grip", urlImage: "shop-image-5.png", salePrice: "380.00", price: "410.00" },
+        { name: "Gamin Microphones", urlImage: "shop-image-8.png", salePrice: "380.00", price: "410.00" },
       ]
     }
   },
@@ -85,8 +85,38 @@ export default {
             </li>
           </ul>
           <div class="d-flex align-items-center">
-            <div class="cart p-2 me-2"><img src="../../assets/icon/cart-icon.png" alt="cart"><span
-                class="number-object-cart" v-bind="cartLength">{{ cartNumber }}</span></div>
+            <div class="cart position-relative p-2 me-2">
+              <img src="../../assets/icon/cart-icon.png" alt="cart">
+              <span class="number-object-cart" v-bind="cartLength">
+                {{ cartNumber }}
+              </span>
+              <div class="visual-cart">
+                <div class="info-cart px-4 d-flex justify-content-between">
+                  <h3>Cart</h3>
+                  <span>{{ cartNumber }}</span>
+                </div>
+                <ul>
+                  <li v-for="cartItem in cartObject" class="px-4 py-1 m-0">
+                    <div class="card mb-3" style="max-width: 540px;">
+                      <div class="row g-0">
+                        <div class="col-md-4">
+                          <img src="..." class="img-fluid rounded-start" alt="...">
+                        </div>
+                        <div class="col-md-8">
+                          <div class="card-body">
+                            <h5 class="card-title">{{ cartItem.name }}</h5>
+                            <span class="sale">${{ cartItem.salePrice }}</span> <del>${{ cartItem.price }}</del>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+                <div class="checkout-button text-center">
+                  <BaseButton contentButton="CHECKOUT" :isArrow="false" />
+                </div>
+              </div>
+            </div>
             <BaseButton contentButton="LIVE STREAMING" :isArrow="false" />
           </div>
         </div>
@@ -96,9 +126,36 @@ export default {
 </template>
 
 <style lang="scss" scoped>
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.visual-cart {
+  padding: 10px 0;
+  width: 300px;
+  position: absolute;
+  right: 0;
+  top: 250%;
+  border-radius: 5px;
+
+  &,
+  .card {
+    color: white;
+    background-color: #30405F;
+
+  }
+
+  .sale {
+    color: #94CB53
+  }
+}
+
+
 li {
   position: relative;
-  margin: 15px 15px 5px 0;
+  margin-right: 15px
 }
 
 #header-nav .navbar-nav {
@@ -115,7 +172,7 @@ li {
 .int:hover .sub-link {
   display: block;
   position: absolute;
-  left: 95%;
+  left: 98%;
   top: 10%;
 }
 
@@ -127,10 +184,10 @@ li {
   border-radius: 3px;
   width: 220px;
   box-shadow: 0 0 3px black;
+  z-index: 2;
 
-  ul {
-    list-style-type: none;
-    padding: 0;
+  li {
+    margin: 15px 0;
   }
 }
 
