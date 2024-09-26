@@ -4,6 +4,7 @@ export default {
   data() {
     return {
       scroll: false,
+      showCart: false,
       active: 0,
       cartNumber: "0",
       navLink: [
@@ -52,6 +53,9 @@ export default {
     },
     deleteItemCart(i) {
       this.cartObject.splice(i, 1)
+    },
+    isShowCart() {
+      this.showCart = !this.showCart
     }
 
   },
@@ -75,7 +79,7 @@ export default {
         </a>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav">
-            <li v-for="(nav, index) in navLink" class="link" @click="isActive(index)">
+            <li v-for="(nav, index) in navLink" class="link">
               <a href="#" :class="(active === index) ? 'active' : ''">{{ nav.name }}</a>
               <div class="internal-link" v-if="nav.internal">
                 <ul>
@@ -92,11 +96,13 @@ export default {
           </ul>
           <div class="d-flex align-items-center">
             <div class="cart position-relative p-2 me-2">
-              <img src="../../assets/icon/cart-icon.png" alt="cart">
-              <span class="number-object-cart" v-bind="cartLength">
-                {{ cartNumber }}
-              </span>
-              <div class="visual-cart">
+              <div @click="isShowCart()">
+                <img src="../../assets/icon/cart-icon.png" alt="cart">
+                <span class="number-object-cart" v-bind="cartLength" v-if="cartObject.length">
+                  {{ cartNumber }}
+                </span>
+              </div>
+              <div class="visual-cart" :class="showCart ? 'd-block' : 'd-none'" v-if="cartObject.length">
                 <div class="info-cart px-4 d-flex justify-content-between">
                   <h3>Cart</h3>
                   <span>{{ cartNumber }}</span>
