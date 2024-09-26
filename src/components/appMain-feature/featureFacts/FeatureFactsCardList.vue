@@ -21,6 +21,7 @@ export default {
 <!-- FeatureFactsCardList -->
 <template>
   <ul id="list-facts">
+    <!-- sended by props to FeatureFactsCardListItem the items(fact) of listFacts[] with v-for-->
     <FeatureFactsCardListItem 
       v-for="(fact, index) in listFacts" :key="index" :fact="fact"
     />
