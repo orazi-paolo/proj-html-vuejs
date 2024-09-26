@@ -36,7 +36,9 @@ export default {
 
 <template>
   <ul>
-    <AppMainFeatureBattleCardListItem />  
+    <AppMainFeatureBattleCardListItem 
+      v-for="(battle, index) in listBattles" :key="index" :battle="battle"
+    />  
   </ul>
 </template>
 

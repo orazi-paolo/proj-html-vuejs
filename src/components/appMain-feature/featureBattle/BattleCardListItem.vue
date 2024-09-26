@@ -4,15 +4,20 @@ export default {
     return {
       
     }
+  },
+  props:{
+    battle:{
+      required: true,
+      type: Object,
+    }
   }
 }
 </script>
 
 <template>
-  <h5>
-    card list item
-  </h5>
-
+  <li>
+   
+  </li>
 </template>
 
 <style scoped>
