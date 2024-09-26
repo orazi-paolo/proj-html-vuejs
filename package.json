@@ -9,9 +9,11 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "animate.css": "^4.1.1",
     "bootstrap": "^5.3.3",
     "bootstrap-icons": "^1.11.3",
-    "vue": "^3.4.37"
+    "vue": "^3.4.37",
+    "wow.js": "^1.2.2"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^5.1.2",

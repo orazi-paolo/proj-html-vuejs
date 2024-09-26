@@ -5,27 +5,28 @@ import BaseButton from './baseComponents/BaseButton.vue'
 export default {
   data() {
     return {
-      
+
     }
   },
   components: {
     AppHeaderNavbar,
     AppHeaderSection,
-    BaseButton,
+    BaseButton
   }
 }
 </script>
 
 <template>
-<h1>
-    Io sono AppHeader
-</h1>
-<AppHeaderNavbar />
-<AppHeaderSection />
-<BaseButton contentButton="PINCOPALLINO" :isArrow="true"/>
-
-
+  <header id="header">
+    <AppHeaderNavbar />
+    <AppHeaderSection />
+  </header>
 </template>
 
 <style scoped>
+header {
+  height: 900px;
+  background-image: url(../assets/index-banner-bg.png);
+  background-size: cover;
+}
 </style>
