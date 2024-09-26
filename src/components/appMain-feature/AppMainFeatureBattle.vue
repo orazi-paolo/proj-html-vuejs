@@ -1,6 +1,8 @@
 <script>
 import AppMainFeatureBattleCardList from './featureBattle/FeatureBattleCardList.vue'
 import BaseSectionTitle from './../baseComponents/BaseSectionTitle.vue'
+import BaseButton from './../baseComponents/BaseButton.vue'
+
 export default {
   data() {
     return {
@@ -10,12 +12,14 @@ export default {
   components: {
     BaseSectionTitle,
     AppMainFeatureBattleCardList,
+    BaseButton,
   }
 }
 </script>
 
+<!-- FeatureBattle -->
 <template>
-  <div class="background">
+  <section class="battle-background">
     <div class="container">
       <div class="row justify-content-center">
         <div class="col-6">
@@ -28,14 +32,19 @@ export default {
         </div>
       </div>
       <AppMainFeatureBattleCardList /> 
+      <div class="text-center">
+        <!-- button imported from BaseComponents -->
+        <BaseButton contentButton="VIEW ALL MATCH"/>
+      </div>
     </div>
-  </div>
+  </section>
 </template>
 
 <style lang="scss" scoped>
 
-.background{
+.battle-background{
   background-color: #212833;
+  padding: 100px 0;
 }
 
 </style>
