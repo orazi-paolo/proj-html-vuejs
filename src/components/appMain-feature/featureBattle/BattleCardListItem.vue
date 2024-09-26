@@ -58,9 +58,31 @@ export default {
   </li>
 </template>
 
-<style scoped>
+<style lang='scss'scoped>
 .card-battle{
   background-color: #fff;
+  border: 1px solid blue;
+  overflow: hidden;
+  border-radius: 40px;
   flex-basis: calc(50% - 20px/2);
+
+  .battle, .info, .links{
+    text-align: center;
+  }
+
+  .battle{
+    padding: 40px 0;
+    background-color: #283449;
+  }
+
+  .info{
+    padding: 30px 0;
+    background-color: #fff;
+  }
+
+  .links{
+    padding: 40px 0;
+    background-color: #283449;
+  }
 }
 </style>
