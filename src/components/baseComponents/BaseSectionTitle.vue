@@ -28,7 +28,7 @@ export default {
 </script>
 
 <template>
-    <div :class="isCenter ? 'text-center' : 'text-start'">
+    <div :class="{'text-center centralize' : isCenter}">
         <h5 class="subtitle">
             {{ contentGreen }}
         </h5>
@@ -43,8 +43,14 @@ export default {
 </template>
 
 <style lang="scss" scoped>
-div {
-    .subtitle {
+.centralize{
+    margin: 0 auto;
+    width: 50%;
+}
+div{
+    background-color: black;
+
+    .subtitle{
         color: #94CB53;
     }
 
