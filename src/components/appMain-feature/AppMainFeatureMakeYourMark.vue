@@ -56,10 +56,10 @@ export default {
       }
     }
     img.img-gamer{
-      height: 600px;
+      height: 700px;
       position: absolute;
       top: 12%;
-      left: -22%;
+      left: -12%;
     }
   }
 </style>
