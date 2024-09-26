@@ -5,6 +5,12 @@ export default {
 
     }
   },
+  props:{
+    item:{
+      type: Object,
+      Required: true
+    }
+  },
   components: {
 
   },
@@ -17,7 +23,7 @@ export default {
 <!-- AppMainFeatureMakeYourMarkCardListItem -->
 <template>
     <li>
-        
+
     </li>
 </template>
 

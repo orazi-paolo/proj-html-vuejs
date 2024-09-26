@@ -34,11 +34,17 @@ export default {
 
 <!-- AppMainFeatureMakeYourMarkCardList -->
 <template>
-    <ul>
-        <AppMainFeatureMakeYourMarkCardListItem />
+    <ul id="list-gaming">
+        <AppMainFeatureMakeYourMarkCardListItem 
+            v-for="(item, index) in listGaming" :key="index" :item="item"
+        />
     </ul>
 </template>
 
 <style lang="scss">
+
+ #list-gaming{
+    list-style-type: none;
+ }
 
 </style>
