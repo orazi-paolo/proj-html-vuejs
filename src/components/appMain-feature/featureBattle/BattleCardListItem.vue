@@ -33,7 +33,7 @@ export default {
       <!-- img of the first team -->
       <img :src="getImagePath(battle.imgUrlTeamOne)" :alt="battle.imgUrlTeamOne">
       <!-- img 'vs' -->
-      <img :src="getImagePath(imgUrlVersus)" :alt="imgUrlVersus">
+      <img class="img-versus" :src="getImagePath(imgUrlVersus)" :alt="imgUrlVersus">
       <!-- img of the second team -->
       <img :src="getImagePath(battle.imgUrlTeamTwo)" :alt="battle.imgUrlTeamOne">
     </div>
@@ -49,11 +49,15 @@ export default {
     <!-- bottom-section of card-battle -->
     <div class="links">
       <!-- icon of youtube -->
-      <img :src="getIconPath(imgUrlYoutube)" :alt="imgUrlYoutube">
-      <span>Youtube</span>
+      <a href="#">
+        <img :src="getIconPath(imgUrlYoutube)" :alt="imgUrlYoutube">
+        <span>Youtube</span>
+      </a>
       <!-- icon of twitter -->
-      <img :src="getIconPath(imgUrlTwitter)" :alt="imgUrlTwitter">
-      <span>Twitch</span>
+      <a href="#">
+        <img :src="getIconPath(imgUrlTwitter)" :alt="imgUrlTwitter">
+        <span>Twitch</span>
+      </a>
     </div>
   </li>
 </template>
@@ -73,6 +77,10 @@ export default {
   .battle{
     padding: 40px 0;
     background-color: #283449;
+
+    .img-versus{
+      margin: 0 20px
+    }
   }
 
   .info{
@@ -81,6 +89,7 @@ export default {
    
     h4{
       color: #fff;
+      margin-bottom: 20px;
     }
     p{
       color: #94CB53;
@@ -92,11 +101,15 @@ export default {
     background-color: #283449;
     color: #fff;
     
-    img{
-      margin-right: 5px;
-    }
-    span{
-      margin-right: 25px;
+    a{
+      text-decoration: none;
+      img{
+        margin-right: 5px;
+      }
+      span{
+        color: #fff;
+        margin-right: 25px;
+      }
     }
   }
 }
