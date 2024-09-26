@@ -46,7 +46,10 @@ export default {
     },
     isActive(i) {
       this.active = i
-    }
+    },
+    getCartImageUrl(url) {
+      return new URL(`../../assets/${url}`, import.meta.url).href;
+    },
 
   },
   mounted() {
@@ -100,7 +103,8 @@ export default {
                     <div class="card mb-3" style="max-width: 540px;">
                       <div class="row g-0">
                         <div class="col-md-4">
-                          <img src="..." class="img-fluid rounded-start" alt="...">
+                          <img :src="getCartImageUrl(cartItem.urlImage)" class="img-fluid rounded-start"
+                            :alt="cartItem.name">
                         </div>
                         <div class="col-md-8">
                           <div class="card-body">
@@ -134,7 +138,7 @@ ul {
 
 .visual-cart {
   padding: 10px 0;
-  width: 300px;
+  width: 350px;
   position: absolute;
   right: 0;
   top: 250%;
