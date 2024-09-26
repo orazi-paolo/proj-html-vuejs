@@ -15,9 +15,6 @@ export default {
 </script>
 
 <template>
-    <h1>
-        Io sono AppFooter di Paolo
-    </h1>
     <AppFooterNewsLetter />
     <AppFooterColList />
 

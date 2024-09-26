@@ -2,18 +2,93 @@
 export default {
   data() {
     return {
-      
+      newsLetter: {
+          imgButton: new URL ('../../assets/icon/send-icon.png', import.meta.url).href,
+          title: 'Subscribe Newsletter',
+          description: 'libero malesuada feugiat. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus.',
+      }
     }
   }
 }
 </script>
 
 <template>
-    <h3>
-        news letter
-    </h3>
+  <section class="newsletter">
+    <div class="container">
+      <div class="row justify-content-center align-items-center">
+         <div class="col-10">
+          <div class="footer-form">
+            <div class="row align-items-center">
+              <div class="col-7">
+                <h3 class="title">
+                  {{ newsLetter.title }}
+                </h3>
+                <p>
+                  {{ newsLetter.description }}
+                </p>
 
+              </div>
+              <div class="col-5">
+                <div class="form-group input-area d-flex align-items-center">
+                  <input type="text" placeholder="Enter your email">
+                  <button class="btn-area">
+                    <img :src="newsLetter.imgButton" alt="send">
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </section>
 </template>
 
-<style scoped>
+<style lang="scss" scoped>
+.newsletter{
+    .footer-form{
+      border-radius: 30px;
+      background-color: #30405f;
+      padding: 80px 60px 72px;
+
+      .title{
+        font-weight: 700;
+        margin-bottom: 10px;
+        color: white;
+      }
+      p{
+        color: white;
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 30px;
+      }
+      .input-area{
+        background-color: #425374;
+        outline: 1px solid #556f9c;
+        border-radius: 10px;
+        input{
+          margin: 4px;
+          padding: 12px;
+          border: none;
+          background-color: transparent;
+          }
+          input, textarea{
+            width: 100%;
+            border-radius: 10px;
+            outline-color: transparent;
+          }
+        }
+      }
+      .btn-area{
+        border-radius: 50%;
+        background-color: #94CB53;
+        min-width: 50px;
+        min-height: 50px;
+        cursor: pointer;
+      }
+      .img{
+        max-width: 100%;
+      }
+    }
 </style>

@@ -31,5 +31,6 @@ export default {
 //Background color of the section
   .base-background{
     background-color: black;
+    padding-bottom: 300px;
   }
 </style>
