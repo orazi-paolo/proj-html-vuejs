@@ -1,4 +1,6 @@
 <script>
+import AppMainFeatureBattleCardListItem from './BattleCardListItem.vue'
+
 export default {
   data() {
     return {
@@ -25,14 +27,17 @@ export default {
         },
       ]
     }
+  },
+  components:{
+    AppMainFeatureBattleCardListItem
   }
 }
 </script>
 
 <template>
-  <h4>
-    card list
-  </h4>
+  <ul>
+    <AppMainFeatureBattleCardListItem />  
+  </ul>
 </template>
 
 <style scoped>

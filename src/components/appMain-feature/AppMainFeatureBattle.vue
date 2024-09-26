@@ -1,6 +1,5 @@
 <script>
 import AppMainFeatureBattleCardList from './featureBattle/FeatureBattleCardList.vue'
-import AppMainFeatureBattleCardListItem from './featureBattle/BattleCardListItem.vue'
 import BaseSectionTitle from './../baseComponents/BaseSectionTitle.vue'
 export default {
   data() {
@@ -11,7 +10,6 @@ export default {
   components: {
     BaseSectionTitle,
     AppMainFeatureBattleCardList,
-    AppMainFeatureBattleCardListItem,
   }
 }
 </script>
@@ -29,13 +27,15 @@ export default {
           />
         </div>
       </div>
-      <AppMainFeatureBattleCardList />
-      <AppMainFeatureBattleCardListItem />
-      
+      <AppMainFeatureBattleCardList /> 
     </div>
   </div>
 </template>
 
-<style lang="scss">
+<style lang="scss" scoped>
+
+.background{
+  background-color: #212833;
+}
 
 </style>
