@@ -25,7 +25,7 @@ export default {
         data-wow-duration="1s" />
     </div>
     <!-- Streaming video card -->
-    <figure class="mx-auto my-5 position-relative">
+    <figure class="mx-auto my-5 position-relative wow animate__animated animate__fadeInUp" data-wow-duration="1s">
       <img src="../../assets/video-bg.png" alt="video straming bg">
       <div class=" live-icon d-inline-flex align-items-center gap-1 rounded-4 position-absolute">
         <img src="../../assets/icon/live-icon.png" alt="live icon">

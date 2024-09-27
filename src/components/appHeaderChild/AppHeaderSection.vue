@@ -21,7 +21,7 @@ export default {
   <section id="jumbotron" class="wow animate__animated animate__fadeInUp position-relative h-100"
     data-wow-duration="1s"
     data-wow-delay="1s">
-    <img src="../../assets/game-controler.png" class="position-absolute controller" alt="">
+    <img src="../../assets/game-controler.png" class="position-absolute controller" alt="controller">
     <div class="container h-100">
       <div class="row h-100">
         <!--Title Section-->
