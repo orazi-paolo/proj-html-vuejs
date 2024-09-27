@@ -46,7 +46,7 @@ export default {
         
         
         .box-icon{
-            flex-basis: 20%;
+            flex-basis: 75px;
         }
         .box-info{
             flex-grow: 1;
