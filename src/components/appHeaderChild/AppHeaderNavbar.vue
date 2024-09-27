@@ -75,7 +75,7 @@ export default {
 <template>
   <!--Header navbar-->
   <section id="header-nav">
-    <nav class="navbar navbar-expand-lg" :class="scroll ? 'nav-fixed' : ''">
+    <nav class="navbar navbar-expand-lg" :class="scroll ? 'nav-fixed wow animate__animated animate__fadeInDown' : ''">
       <div class="container">
         <!--Logo-->
         <a class="navbar-brand" href="#">
