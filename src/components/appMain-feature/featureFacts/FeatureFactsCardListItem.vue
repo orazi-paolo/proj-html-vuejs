@@ -5,27 +5,27 @@ export default {
       incrementedNumber: 0,
     }
   },
-  props:{
-    fact:{
+  props: {
+    fact: {
       required: true,
       type: Object,
     }
   },
-  methods:{
+  methods: {
     // function that generates a random number from min to max
-    getRandomNumber(min, max){
+    getRandomNumber(min, max) {
       // generate the random number
-      let result = Math.floor(Math.random() * (max + 1 -min)) + min;
+      let result = Math.floor(Math.random() * (max + 1 - min)) + min;
       return result;
     },
 
-    getIncreaseNumber(){
+    getIncreaseNumber() {
       // call getRandomNumber
       this.incrementedNumber = this.getRandomNumber(this.fact.min, this.fact.max);
 
       // start incrementing the number every 25ms
       const increaseNumber = setInterval(() => {
-        this.incrementedNumber++; 
+        this.incrementedNumber++;
       }, 25);
 
       // after 2.5 seconds, the increment stops
@@ -34,7 +34,7 @@ export default {
       }, 2500);
     }
   },
-  mounted(){
+  mounted() {
     this.getIncreaseNumber()
   }
 }
@@ -45,31 +45,33 @@ export default {
   <!-- li of the single card-fact(fact) -->
   <li class="card-fact">
     <!-- number of the fact that increases by the method: getIncreaseNumber() -->
-    <h5>{{ incrementedNumber  }}</h5>
+    <h5>{{ incrementedNumber }}</h5>
     <!-- title of the card -->
     <p>{{ fact.title }}</p>
   </li>
 </template>
 
 <style lang="scss" scoped>
+// Import stylesheet
+@import "/src/style/utils.scss";
 
-  .card-fact{
-    flex-basis: calc(25% - 60px/4);
-    text-align: center;
-    border: 1px solid #10161F;
-    border-radius: 50px;
-    overflow: hidden;
-    padding: 50px 0;
+.card-fact {
+  flex-basis: calc(25% - 60px/4);
+  text-align: center;
+  border: 1px solid #10161F;
+  border-radius: 50px;
+  overflow: hidden;
+  padding: 50px 0;
 
-    h5{
-      color: #fff;
-      margin-bottom: 20px;
-      font-size: 50px;
-      font-weight: 600;
-    }
-
-    p{
-      color: #94CB53;
-    }
+  h5 {
+    color: #fff;
+    margin-bottom: $margin-lg;
+    font-size: 50px;
+    font-weight: 600;
   }
+
+  p {
+    color: $lightOliveGreen;
+  }
+}
 </style>

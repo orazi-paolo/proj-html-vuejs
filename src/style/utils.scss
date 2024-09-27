@@ -1,2 +1,44 @@
+// --- Variables
+
 // Palet colors 
-$white: #ffffff00;
+$white: #ffffff;
+$black: #000000;
+$lightGray: #EBEBEB;
+$brightTeal: #08CB7B;
+$lightOliveGreen: #94CB53;
+$cardsBg: #30405F;
+$brightOrange: #FF9933;
+$scrollBarThumbBg: #5935C2;
+$trackBg: #00013C;
+$rateStar: #f3be2b;
+
+
+// Dimensions
+$sm: 5px;
+$md: 10px;
+$lg: 20px;
+$xlg: 30px;
+
+// Gap dimension
+$gapSm: 1px;
+$gapMd: 3px;
+$gapLg: 5px;
+$gapXlg: 10px;
+
+// Padding
+$padding-sm: $sm;
+$padding-md: $md;
+$padding-lg: $lg;
+$padding-xlg: $xlg;
+
+// Margin
+$margin-sm: $sm;
+$margin-md: $md;
+$margin-lg: $lg;
+$margin-xlg: $xlg;
+
+// Customize dimension
+$playBtnWidth: 60px;
+$playBtnHeight: 60px;
+$playIconWidth: 50px;
+$playIconHeight: 50px;

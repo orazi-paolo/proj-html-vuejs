@@ -2,23 +2,23 @@
 export default {
   data() {
     return {
-      imgUrlVersus:'verus-icon.png',
-      imgUrlYoutube:'youtube-icon.png',
-      imgUrlTwitter:'twitch-icon.png',
+      imgUrlVersus: 'verus-icon.png',
+      imgUrlYoutube: 'youtube-icon.png',
+      imgUrlTwitter: 'twitch-icon.png',
     }
   },
-  props:{
-    battle:{
+  props: {
+    battle: {
       required: true,
       type: Object,
     }
   },
-  methods:{
-    getImagePath(img){
-        return new URL(`../../../assets/${img}`, import.meta.url).href
+  methods: {
+    getImagePath(img) {
+      return new URL(`../../../assets/${img}`, import.meta.url).href
     },
-    getIconPath(icon){
-        return new URL(`../../../assets/icon/${icon}`, import.meta.url).href
+    getIconPath(icon) {
+      return new URL(`../../../assets/icon/${icon}`, import.meta.url).href
     }
   }
 }
@@ -62,52 +62,60 @@ export default {
   </li>
 </template>
 
-<style lang='scss'scoped>
-.card-battle{
-  background-color: #fff;
+<style lang='scss' scoped>
+// Import stylesheet
+@import "/src/style/utils.scss";
+
+.card-battle {
+  background-color: $white;
   border: 2px solid #3B5171;
   overflow: hidden;
-  border-radius: 20px;
+  border-radius: $lg;
   flex-basis: calc(50% - 20px/2);
 
-  .battle, .info, .links{
+  .battle,
+  .info,
+  .links {
     text-align: center;
   }
 
-  .battle{
+  .battle {
     padding: 40px 0;
     background-color: #283449;
 
-    .img-versus{
+    .img-versus {
       margin: 0 20px
     }
   }
 
-  .info{
-    padding: 30px 0;
+  .info {
+    padding: $padding-xlg 0;
     background-color: #2D405E;
-   
-    h4{
-      color: #fff;
-      margin-bottom: 20px;
+
+    h4 {
+      color: $white;
+      margin-bottom: $margin-lg;
     }
-    p{
-      color: #94CB53;
+
+    p {
+      color: $lightOliveGreen;
     }
   }
 
-  .links{
+  .links {
     padding: 40px 0;
     background-color: #283449;
-    color: #fff;
-    
-    a{
+    color: $white;
+
+    a {
       text-decoration: none;
-      img{
+
+      img {
         margin-right: 5px;
       }
-      span{
-        color: #fff;
+
+      span {
+        color: $white;
         margin-right: 25px;
       }
     }

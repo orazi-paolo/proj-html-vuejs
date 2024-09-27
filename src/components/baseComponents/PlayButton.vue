@@ -9,8 +9,8 @@ export default {
 </script>
 
 <template>
-    <div class="play">
-        <div class="play-btn p-2" role="btn">
+    <div class="play" role="button">
+        <div class="play-btn p-2">
         </div>
         <div class="play-icon bg-white d-flex justify-content-center align-items-center">
             <img src="/src/assets/icon/play-icon.png" alt="play-icon">
@@ -19,11 +19,14 @@ export default {
 </template>
 
 <style lang='scss'>
+// Import stylesheet
+@import "/src/style/utils.scss";
+
 .play {
     position: relative;
     display: inline-block;
-    width: 60px;
-    height: 60px;
+    width: $playBtnWidth;
+    height: $playBtnWidth;
 }
 
 .play-btn {
@@ -32,14 +35,14 @@ export default {
     animation: breath 7s linear infinite;
     display: inline-block;
     position: absolute;
-    width: 60px;
-    height: 60px;
+    width: $playBtnWidth;
+    height: $playBtnHeight;
 }
 
 .play-icon {
     position: absolute;
-    width: 50px;
-    height: 50px;
+    width: $playIconWidth;
+    height: $playIconHeight;
     border-radius: 50%;
     top: 50%;
     left: 50%;

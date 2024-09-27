@@ -76,6 +76,9 @@ export default {
 </template>
 
 <style lang="scss" scoped>
+// Import stylesheet
+@import "/src/style/utils.scss";
+
 .scroll-move,
 /* apply transition to moving elements */
 .scroll-enter-active,
@@ -86,7 +89,7 @@ export default {
 .scroll-enter-from,
 .scroll-leave-to {
   opacity: 0;
-  transform: translate(30px);
+  transform: translate($xlg);
 }
 
 /* ensure leaving items are taken out of layout flow so that moving

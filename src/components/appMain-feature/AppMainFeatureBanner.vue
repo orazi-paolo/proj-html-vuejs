@@ -21,7 +21,7 @@ export default {
     <!-- Discount Title  -->
     <div
       class="container discount-title d-flex flex-column justify-content-center align-items-center text-white rounded-3 position-relative p-3  overflow-y-hidden wow animate__animated animate__fadeInUp"
-        data-wow-duration="1s">
+      data-wow-duration="1s">
       <h6>Make Offer</h6>
       <h1>Get {{ this.offer }}% Offer discount</h1>
       <!-- Phone img  -->
@@ -38,9 +38,12 @@ export default {
 </template>
 
 <style lang="scss" scoped>
+// Import stylesheet
+@import "/src/style/utils.scss";
+
 section {
   .discount-title {
-    background-image: url("../../assets/banner-item-bg.png");
+    background-image: url("src/assets/banner-item-bg.png");
     background-size: cover;
     background-position: center;
     height: 300px;
@@ -67,7 +70,7 @@ section {
 
   #btn {
     font-size: 12px;
-    background: rgba($color: black, $alpha: 0.3);
+    background: rgba($color: $black, $alpha: 0.3);
   }
 }
 </style>

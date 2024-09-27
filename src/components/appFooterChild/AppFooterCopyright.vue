@@ -1,10 +1,10 @@
 <script>
 export default {
-  data() {
-    return {
-      
+    data() {
+        return {
+
+        }
     }
-  }
 }
 </script>
 
@@ -12,7 +12,7 @@ export default {
     <div class="bg-blue-dark">
         <div class="container pt-4 pb-4">
             <p class="d-flex justify-content-center align-items-center">
-                Copyright @ 2022<span>FUTIO</span>. All rights reserved. 
+                Copyright @ 2022<span>FUTIO</span>. All rights reserved.
             </p>
         </div>
     </div>
@@ -20,14 +20,19 @@ export default {
 </template>
 
 <style lang="scss" scoped>
-.bg-blue-dark{
+// Import stylesheet
+@import "/src/style/utils.scss";
+
+.bg-blue-dark {
     background-color: #1c212e;
-    p{
+
+    p {
         margin-bottom: 0;
         font-size: 14px;
-        color: lightgray;
-        span{
-            color: #94CB53;
+        color: $lightGray;
+
+        span {
+            color: $lightOliveGreen;
         }
     }
 }

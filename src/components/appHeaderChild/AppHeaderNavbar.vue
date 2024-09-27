@@ -155,6 +155,9 @@ export default {
 </template>
 
 <style lang="scss" scoped>
+// Import stylesheet
+@import "/src/style/utils.scss";
+
 ul {
   font-size: 18px;
   list-style-type: none;
@@ -169,7 +172,7 @@ ul {
 }
 
 .visual-cart {
-  padding: 10px 0;
+  padding: $padding-md 0;
   width: 350px;
   position: absolute;
   right: 0;
@@ -178,16 +181,16 @@ ul {
   transition: 0.4s;
   visibility: hidden;
   opacity: 0;
-  border-radius: 5px;
+  border-radius: $sm;
 
   &,
   .card {
-    color: white;
-    background-color: #30405F;
+    color: $white;
+    background-color: $cardsBg;
   }
 
   .sale {
-    color: #94CB53
+    color: $lightOliveGreen
   }
 }
 
@@ -218,11 +221,11 @@ li {
 .internal-link,
 .sub-link {
   display: none;
-  background-color: #30405F;
+  background-color: $cardsBg;
   padding-left: 40px;
   border-radius: 3px;
   width: 220px;
-  box-shadow: 0 0 3px black;
+  box-shadow: 0 0 3px $black;
   z-index: 2;
 
   li {
@@ -231,12 +234,12 @@ li {
 }
 
 li a {
-  color: white;
+  color: $white;
   font-family: "Orbitron", sans-serif;
   font-weight: bold;
 
   &:hover {
-    color: #94CB53;
+    color: $lightOliveGreen;
     transition: 0.3s;
 
     img {
@@ -256,11 +259,11 @@ li a {
 
 .card:hover .delete-item {
   display: inline;
-  color: #94CB53;
+  color: $lightOliveGreen;
 }
 
 li .active {
-  color: #94CB53
+  color: $lightOliveGreen
 }
 
 
@@ -273,7 +276,7 @@ li .active {
 }
 
 #header-nav .nav-fixed {
-  background-color: #30405F;
+  background-color: $cardsBg;
   position: fixed;
   left: 0;
   right: 0;

@@ -4,9 +4,9 @@ export default {
     return {
       // create a object to store the data of newsLetter
       newsLetter: {
-          imgButton: new URL ('../../assets/icon/send-icon.png', import.meta.url).href,
-          title: 'Subscribe Newsletter',
-          description: 'libero malesuada feugiat. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus.',
+        imgButton: new URL('../../assets/icon/send-icon.png', import.meta.url).href,
+        title: 'Subscribe Newsletter',
+        description: 'libero malesuada feugiat. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus.',
       }
     }
   }
@@ -18,7 +18,7 @@ export default {
   <section class="newsletter">
     <div class="container">
       <div class="row justify-content-center align-items-center">
-         <div class="col-10">
+        <div class="col-10">
           <div class="footer-form">
             <div class="row align-items-center">
               <div class="col-7">
@@ -50,58 +50,68 @@ export default {
 </template>
 
 <style lang="scss" scoped>
-.newsletter{
+// Import stylesheet
+@import "/src/style/utils.scss";
+
+.newsletter {
   position: relative;
   top: -50%;
   left: 0;
   transform: translateY(-50%);
 
-    .footer-form{
-      border-radius: 30px;
-      background-color: #30405F;
-      padding: 80px 60px 72px;
+  .footer-form {
+    border-radius: $xlg;
+    background-color: #30405F;
+    padding: 80px 60px 72px;
 
-      .title{
-        font-weight: 700;
-        margin-bottom: 10px;
-        color: white;
+    .title {
+      font-weight: 700;
+      margin-bottom: 10px;
+      color: $white;
+    }
+
+    p {
+      color: $white;
+      font-size: 18px;
+      font-weight: 400;
+      line-height: $xlg;
+    }
+
+    .input-area {
+      background-color: #425374;
+      outline: 1px solid #30455f;
+      border-radius: $md;
+
+      input {
+        margin: 4px;
+        padding: 12px;
+        border: none;
+        background-color: transparent;
       }
-      p{
-        color: white;
-        font-size: 18px;
-        font-weight: 400;
-        line-height: 30px;
-      }
-      .input-area{
-        background-color: #425374;
-        outline: 1px solid #30455f;
-        border-radius: 10px;
-        input{
-          margin: 4px;
-          padding: 12px;
-          border: none;
-          background-color: transparent;
-          }
-          input, textarea{
-            width: 100%;
-            border-radius: 10px;
-            outline-color: #94CB53;
-          }
-        }
-      }
-      .btn-area{
-        border-radius: 50%;
-        background-color: #94CB53;
-        min-width: 50px;
-        min-height: 50px;
-        cursor: pointer;
-        padding: 10px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
-      .img{
-        max-width: 100%;
+
+      input,
+      textarea {
+        width: 100%;
+        border-radius: $md;
+        outline-color: #94CB53;
       }
     }
+  }
+
+  .btn-area {
+    border-radius: 50%;
+    background-color: #94CB53;
+    min-width: 50px;
+    min-height: 50px;
+    cursor: pointer;
+    padding: $padding-md;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .img {
+    max-width: 100%;
+  }
+}
 </style>

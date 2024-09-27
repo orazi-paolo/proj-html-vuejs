@@ -21,8 +21,7 @@ export default {
   <section class="p-5">
     <div class="container">
       <BaseSectionTitle contentGreen="Live Streaming" mainTitle="Watch the Streams" description="libero malesuada feugiat. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus.
-      Cras ultricies ligula sed magna dictum porta." is-center
-      class="wow animate__animated animate__fadeInUp"
+      Cras ultricies ligula sed magna dictum porta." is-center class="wow animate__animated animate__fadeInUp"
         data-wow-duration="1s" />
     </div>
     <!-- Streaming video card -->
@@ -52,9 +51,12 @@ export default {
 </template>
 
 <style lang="scss" scoped>
+// Import stylesheet
+@import "/src/style/utils.scss";
+
 section {
-  background-color: black;
-  background-image: url("../../assets/live-streaming-bg.png");
+  background-color: $black;
+  background-image: url("/src/assets/live-streaming-bg.png");
   background-size: contain;
   background-position: top;
   background-repeat: no-repeat;
@@ -69,7 +71,7 @@ section {
     .live-icon {
       font-size: 12px;
       background-color: #FF9933;
-      padding: 5px 20px;
+      padding: $padding-sm $padding-lg;
       top: 30px;
       right: 30px;
     }
@@ -84,12 +86,12 @@ section {
 
   .feedback {
     font-size: 10px;
-    color: white;
+    color: $white;
     left: 30px;
     bottom: 30px;
 
     .nr {
-      color: #94CB53;
+      color: $lightOliveGreen;
     }
   }
 

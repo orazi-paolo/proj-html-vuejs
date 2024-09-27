@@ -9,7 +9,7 @@ export default {
       imgUrl: 'features-illus.png'
     }
   },
-  components:{
+  components: {
     BaseSectionTitle,
     AppMainFeatureMakeYourMarkCardList,
     BaseButton,
@@ -20,18 +20,15 @@ export default {
 <!-- AppMainFeatureMakeYourMark -->
 <template>
   <section class="makeYourMark-background">
-    <div class="containerwow animate__animated animate__fadeInUp"
-  data-wow-duration="1s">
+    <div class="containerwow animate__animated animate__fadeInUp" data-wow-duration="1s">
       <div class="row-battle">
         <div class="col-battle-left"></div>
         <div class="col-battle-right">
-          <BaseSectionTitle 
-            contentGreen="The Ultimate Competitive Gaming Platfrom" 
+          <BaseSectionTitle contentGreen="The Ultimate Competitive Gaming Platfrom"
             mainTitle="Make Your Mark on the Battle Field"
-            description="libero malesuada feugiat. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Cras ultricies ligula sed magna dictum porta."
-          />
+            description="libero malesuada feugiat. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Cras ultricies ligula sed magna dictum porta." />
           <AppMainFeatureMakeYourMarkCardList />
-          <BaseButton contentButton="PLAN NOW"/>
+          <BaseButton contentButton="PLAN NOW" />
         </div>
       </div>
     </div>
@@ -41,26 +38,32 @@ export default {
 </template>
 
 <style lang="scss">
-  .makeYourMark-background{
-    background-color: #000;
-    padding: 100px 0;
-    position: relative;
-    .row-battle{
-      display: flex;
-      justify-content: space-between;
+// Import stylesheet
+@import "/src/style/utils.scss";
 
-      .col-battle-left{
+.makeYourMark-background {
+  background-color: $black;
+  padding: 100px 0;
+  position: relative;
+
+  .row-battle {
+    display: flex;
+    justify-content: space-between;
+
+    .col-battle-left {
       flex-basis: 40%;
-      }
-      .col-battle-right{
-      flex-basis: 50%;
-      }
     }
-    img.img-gamer{
-      height: 700px;
-      position: absolute;
-      top: 12%;
-      left: -200px;
+
+    .col-battle-right {
+      flex-basis: 50%;
     }
   }
+
+  img.img-gamer {
+    height: 700px;
+    position: absolute;
+    top: 12%;
+    left: -200px;
+  }
+}
 </style>

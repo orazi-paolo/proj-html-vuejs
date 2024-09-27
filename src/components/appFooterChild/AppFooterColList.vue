@@ -2,7 +2,7 @@
 export default {
   data() {
     return {
-      
+
     }
   },
   props: {
@@ -25,23 +25,27 @@ export default {
     </h5>
     <ul class="list-unstyled">
       <li v-for="item in items" :key="item" class="mb-2">
-         <a href="">
-            {{ item }}
-         </a>
-        </li>
+        <a href="">
+          {{ item }}
+        </a>
+      </li>
     </ul>
   </div>
 </template>
 
 <style lang="scss" scoped>
-li{
-  a{
+// Import stylesheet
+@import "/src/style/utils.scss";
+
+li {
+  a {
     color: rgba(211, 211, 211, 0.437);
     font-size: 14px;
     text-decoration: none;
     transition: color 0.3s;
-    &:hover{
-      color: #94CB53;
+
+    &:hover {
+      color: $lightOliveGreen;
     }
   }
 }

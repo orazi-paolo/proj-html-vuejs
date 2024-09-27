@@ -45,9 +45,13 @@ export default {
 </template>
 
 <style lang="scss">
+// Import from libraries
 @use "/node_modules/bootstrap/scss/bootstrap.scss";
-@use "/src/style/general.scss";
 @use '/node_modules/bootstrap-icons/font/bootstrap-icons.min.css';
+// Import stylesheet
+@use "/src/style/general.scss";
+@import "./style/utils.scss";
+
 
 .fade-disperse-enter-active,
 .fade-disperse-leave-active {
@@ -57,7 +61,7 @@ export default {
 .fade-disperse-leave-to {
   opacity: 0;
   transform: scale(1.1);
-  filter: blur(5px);
+  filter: blur($sm);
 }
 
 .main-content {
@@ -74,7 +78,7 @@ export default {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: rgba(255, 255, 255, 0.9);
+  background-color: rgba($white, 0.9);
   z-index: 3;
 }
 
@@ -84,16 +88,16 @@ export default {
 
 /* width */
 ::-webkit-scrollbar {
-  width: 10px;
+  width: $md;
 }
 
 /* Track */
 ::-webkit-scrollbar-track {
-  background: #00013C;
+  background: $trackBg;
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: #5935C2;
+  background: $scrollBarThumbBg;
 }
 </style>

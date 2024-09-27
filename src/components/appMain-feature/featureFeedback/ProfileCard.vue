@@ -40,12 +40,15 @@ export default {
 </template>
 
 <style lang='scss' scoped>
+// Import stylesheet
+@import "/src/style/utils.scss";
+
 img {
-    width: 30px;
+    width: $xlg;
 }
 
 p {
     font-size: 14px;
-    color: #94CB53;
+    color: $lightOliveGreen;
 }
 </style>

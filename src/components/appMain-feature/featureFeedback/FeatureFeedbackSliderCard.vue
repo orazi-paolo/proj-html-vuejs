@@ -55,12 +55,15 @@ export default {
 </template>
 
 <style lang="scss" scoped>
+// Import stylesheet
+@import "/src/style/utils.scss";
+
 .card {
-  background-color: #30405F;
-  border-radius: 20px;
+  background-color: $cardsBg;
+  border-radius: $lg;
 }
 
 i.bi-star-fill {
-  color: #F0C037;
+  color: $rateStar;
 }
 </style>
