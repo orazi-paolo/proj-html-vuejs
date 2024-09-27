@@ -60,10 +60,23 @@ export default {
   }
 
   img.img-gamer {
-    height: 700px;
+    height: 600px;
     position: absolute;
     top: 12%;
     left: -200px;
+    @media (max-width: 1150px){
+      position: static;
+      top: auto;
+      left: auto;
+      display: block;
+      margin-top: 50px;
+    }
+    @media (min-width: 1400px){
+      left: -100px;
+    }
+    @media (min-width: 1700px){
+      left: 100px;
+    }
   }
 }
 </style>
