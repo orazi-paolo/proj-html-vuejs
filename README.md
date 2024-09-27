@@ -8,7 +8,7 @@
 
 Have fun!!
 
-## Le tecnologie utilizzate
+## Technologies
 - HTML v5
 - CSS 
 - sass v1.79.3 : ```npm i sass```
@@ -66,7 +66,7 @@ The components reused by all or almost all the sections are 3:
 - BaseSectionTitle: the generic title of each section of the main and header
 - PlayButton :a generic button with the play symbol
 
-# CREDITI
+# Credits
 
 - Paolo Orazi Front-End
 - Melvin Jerome Maligaya Front-End
