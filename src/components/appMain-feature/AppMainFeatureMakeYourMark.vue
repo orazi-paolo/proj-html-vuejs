@@ -20,7 +20,7 @@ export default {
 <!-- AppMainFeatureMakeYourMark -->
 <template>
   <section class="makeYourMark-background">
-    <div class="containerwow animate__animated animate__fadeInUp" data-wow-duration="1s">
+    <div class="container wow animate__animated animate__fadeInUp" data-wow-duration="1s">
       <div class="row-battle">
         <div class="col-battle-left"></div>
         <div class="col-battle-right">
