@@ -1,70 +1,70 @@
 # Project team 5 with Boolean
-## Installazione / Introduzione
-1. Installare la repository sul vostro pc.
-2. Aprite la vostra cartella in un editor che preferite (faremo l'esempio con Visual Studio Code)
-3. Aprite il vostro terminale e digitate questo comando: ``` npm install ```
-4. Finito il caricamento dell'installazione, digitate questo comando per far andare il progetto tramite un server in un link locale che prenderete e lo aprirete sul vostro motore di ricerca preferito: ```npm run dev```
-5. Non scordatevi di godere dell'esperienza di scoprire non solo la parte visiva ma anche l'implementazione del codice!!
+## Installation / Introduction
+1. Install the repository on your PC.
+2. Open your folder in an editor of your choice (we'll use Visual Studio Code as an example)
+3. Open your terminal and type this command: ``` npm install ```
+4. Once the installation has finished loading, type this command to send the project via a server to a local link that you will take and open on your favorite search engine: ```npm run dev```
+5. Don't forget to enjoy the experience of discovering not only the visual part but also the implementation of the code!!
 
-Buon divertimento!!
+Have fun!!
 
 ## Le tecnologie utilizzate
 - HTML v5
 - CSS 
 - sass v1.79.3 : ```npm i sass```
 - Vue v3.4.37
-- Librerie:
+- Bookshops:
   - wow.js v1.2.2 : ```npm i wow.js```
   - bootstrap v5.3.3 :  ```npm i bootstrap```
   - bootstrap-icons v1.11.3 : ```npm i bootstrap-icons```
   - animate.css v4.1.1 : ```npm i animate.css```
-- Strumento di compilazione: 
+- Build Tool: 
     - Vite v5.4.1 : ```create vite@latest```
 
 ## Description
-Il progetto è stato suddiviso in componenti qui sotto vi illustreremo passo passo tutta la struttura con le spiegazioni di ogni componente.
+The project has been divided into components. Below we will show you the entire structure step by step with explanations of each component.
 
 # AppVue
-E' il componente principale del progetto, qui ci si concentra sull'implementare i suoi 3 componenti sottostanti e ci si sofferma sul ragionamento delle animazioni sul CSS generale.
+It is the main component of the project, here we focus on implementing its 3 underlying components and focus on the reasoning of the animations on the general CSS.
 
-Al suo interno abbiamo 4 componenti:
-- AppHeader : ha lo scopo di racchiudere i suoi componenti (è completamente responsive) che sono suddivisi in <br>
-    - AppHeaderNavbar : vi è un carrello dinamico che tramite un click permette di aprirlo e qualora presenti degli elementi di eliminarli. <br> Sui link della navbar è presente un effetto di hover per il colore e per l'apertura del menù a tendina. <br> Al click si ha la possibilà qual'ora si collegassero nuove pagine di cambiarle. <br>
-    La navbar presenta lo stesso sfondo dell'header ma allo scrollo della pagina va in posizione fixed ed avrà un background color diverso inoltre presenta un animazione di "fadeInDown".
-    - AppHeaderSection : vi è la descrizione generica della pagina. Vi sono due immagini entrambe posizionate tramite position.
+Inside we have 4 components:
+- AppHeader : is intended to enclose its components (it is fully responsive) which are divided into <br>
+    - AppHeaderNavbar : there is a dynamic cart which, with a click, allows you to open it and, if there are any items, to delete them. <br>On the navbar links there is a hover effect for the color and for opening the drop-down menu. <br> With a click you have the possibility to change them whenever new pages are connected. <br>
+    The navbar has the same background as the header but when scrolling the page it goes to fixed position and will have a different background color and also presents a "fadeInDown" animation.
+    - AppHeaderSection : there is the generic description of the page. There are two images both positioned via position.
 
-- AppMain : anche lui contiene i suoi componenti:
-    - AppMainFeatureMakeYourMark : in questa sezione vi è una rappresentazione delle varie offerte che vi sono, è suddiviso in due parti dove la parte sinistra abbiamo un immagine in position absolute di un gamer e nella parte destra tutta la descrizione delle offerte. <br>
-    Vi sono due componenti:
-      - AppMainFeatureMakeYourMarkCardList: contiene il ragionamento svolto sul suo componente interno sulla rappresentazione delle offerte
-        - AppMainFeatureMakeYourMarkCardListItem : ha la funzione di rappresentare in maniera dinamica ogni singola offerta
-    - AppMainFeatureBattle: rappresenta gli attuali scontri che avverrano a breve, viene suddiviso in due componenti:
-      - FeatureBattleCardList: contiene il ragionamento svolto sul suo componente interno sulla rappresentazione dei match
-      - BattleCardListItem: ha la funzione di rappresentare in maniera dinamica ogni singolo match
-    - AppMainFeatureFacts: presenta le statistiche attuali nel mondo degli E-Sport, si divide in 2 componenti:
-      - FeatureFactsCardList: ontiene il ragionamento svolto sul suo componente interno sulla rappresentazione delle statistiche
-      - BattleCardListItem : ha la funzione di rappresentare in maniera dinamica ogni singola statistica e vi è un metodo sullo scroll dove ogni volta che la sezione sarà presente nella viewport saranno aggiornate le statistiche in maniera casuale
-    - AppMainFeatureStreaming : permette di vedere un anteprima di una stream ed è organizzata con un immagine e un componente generico posizionato in absolute
-    - AppMainFeatureFeedback: contiene l'insieme delle recensioni e viene suddiviso in tre componenti:
-      - ProfileCard: è un componente specifico che si occupa di implementare i profili delle persone in maniera dinamica.
-      - FeatureFeedbackSlider: si occupa di implementare la base logica su cui poi verrà rappresentata la card della recensione 
-        - FeatureFeedbackSliderCard: compila in maniera dinamica la card
-    - AppMainFeatureBanner : mostra il banner attivo attualmente
-    - AppmainFeatureNews : è una rappresentazione grafica delle news tramite card si suddivide in due componenti:
-      - FeatureNewsList : contiene il ragionamento svolto sul suo componente interno sulla rappresentazione delle news e la news principale piu in voga
-      - FeatureNewsListCard: ha la funzione di rappresentare in maniera dinamica ogni singola news laterale
+- AppMain : it also contains its components:
+    - AppMainFeatureMakeYourMark : in this section there is a representation of the various offers there are, it is divided into two parts where the left part has an image in absolute position of a gamer and on the right part the entire description of the offers. <br>
+    There are two components:
+      - AppMainFeatureMakeYourMarkCardList: contains the reasoning carried out on its internal component on the representation of offers
+        - AppMainFeatureMakeYourMarkCardListItem : has the function of dynamically representing each individual offer
+    - AppMainFeatureBattle: represents the current clashes that will occur soon, is divided into two components:
+      - FeatureBattleCardList: contains the reasoning carried out on its internal component on the representation of the matches
+      - BattleCardListItem:It has the function of dynamically representing every single match
+    - AppMainFeatureFacts: presents current statistics in the world of E-Sports, is divided into 2 components:
+      - FeatureFactsCardList: contains the reasoning carried out on its internal component on the representation of statistics
+      - BattleCardListItem : it has the function of dynamically representing each single statistic and there is a method on the scroll where every time the section is present in the viewport the statistics will be updated randomly
+    - AppMainFeatureStreaming : allows you to see a preview of a stream and is organized with an image and a generic component positioned in absolute
+    - AppMainFeatureFeedback: contains all the reviews and is divided into three components:
+      - ProfileCard: it is a specific component that is responsible for implementing people's profiles in a dynamic way.
+      - FeatureFeedbackSlider: takes care of implementing the logical basis on which the review card will then be represented
+        - FeatureFeedbackSliderCard: dynamically fill out the card
+    - AppMainFeatureBanner :shows the currently active banner
+    - AppmainFeatureNews : it is a graphic representation of the news via card and is divided into two components:
+      - FeatureNewsList : contains the reasoning carried out on its internal component on the representation of news and the most popular main news
+      - FeatureNewsListCard: has the function of dynamically representing every single lateral news
 
-- AppFooter : da la possibilità di accedere a diversi link che portano alle rispettive pagine, è suddivisa in tre componenti:
-  - AppFooterNewsLetter: è in position relative tra la FeatureNews e il footer e permette di registrarsi alla newsletter del sito.
-  - AppFooterColList : suddivide in più colonne la struttura del footer basandosi sui titoli e contiene all interno il suo componente singolo per le colonne dove riempie dinamicamente ogni colonna.
-  - AppFooterCopyright : sezione copyright.
-- AppLoader : un componente specifico per il caricamento fittizio della pagina iniziale
+- AppFooter : gives the possibility of accessing different links that lead to the respective pages, it is divided into three components:
+  - AppFooterNewsLetter: it is in relative position between the FeatureNews and the footer and allows you to register for the site's newsletter.
+  - AppFooterColList : divides the footer structure into multiple columns based on the titles and contains its single column component where it dynamically fills each column.
+  - AppFooterCopyright :copyright section.
+- AppLoader : a specific component for dummy loading of the home page
 
 ## Base components
-I componenti riutilizzati da tutte o quasi le sezioni sono 3:
-- BaseButton: un bottone presente in molte parti del progetto ed ha una condizione per verificare se sono presenti le arrow o meno.
-- BaseSectionTitle: il titolo generico di ogni sezione del main e dell'header
-- PlayButton : un bottone generico con il simbolo play
+The components reused by all or almost all the sections are 3:
+- BaseButton: a button present in many parts of the project and has a condition to check whether the arrows are present or not.
+- BaseSectionTitle: the generic title of each section of the main and header
+- PlayButton :a generic button with the play symbol
 
 # CREDITI
 
