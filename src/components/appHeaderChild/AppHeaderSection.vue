@@ -34,7 +34,7 @@ export default {
           </div>
         </div>
         <!--Banner Soldier-->
-        <div class="col-6">
+        <div class="col-6 col-image">
           <div class="banner position-relative">
             <img src="../../assets/index-banner-illus.png" alt="soldier live" class="soldier">
           </div>
@@ -80,5 +80,20 @@ export default {
   position: absolute;
   top: -500px;
   left: -30%;
+}
+
+@media (max-width: 992px) {
+
+  .col-image,
+  .controller {
+    display: none;
+  }
+
+  .title {
+    width: 100%;
+    z-index: 0;
+  }
+
+
 }
 </style>

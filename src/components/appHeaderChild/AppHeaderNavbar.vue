@@ -1,5 +1,7 @@
 <script>
+// import components
 import BaseButton from "../baseComponents/BaseButton.vue"
+
 export default {
   data() {
     return {
@@ -71,17 +73,20 @@ export default {
 </script>
 
 <template>
+  <!--Header navbar-->
   <section id="header-nav">
     <nav class="navbar navbar-expand-lg" :class="scroll ? 'nav-fixed' : ''">
       <div class="container">
+        <!--Logo-->
         <a class="navbar-brand" href="#">
           <img src="../../assets/logo.png" alt="Logo Futio" class="d-inline-block align-text-top">
         </a>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <div class="collapse navbar-collapse">
+          <!--Main Links-->
           <ul class="navbar-nav">
             <li v-for="(nav, index) in navLink" class="link" @click="isActive(index)">
-              <a href="#" :class="(active === index) ? 'active' : ''">{{ nav.name }} <span v-if="nav.internal"><img
-                    src="../../assets/svg/c-down-arrow.svg" alt=""></span></a>
+              <a href="#" :class="(active === index) ? 'active' : ''">{{ nav.name }} <span v-if="nav.internal"
+                  class="arrow"><img src="../../assets/svg/c-down-arrow.svg" alt=""></span></a>
               <div class="internal-link" v-if="nav.internal">
                 <ul>
                   <li v-for="int in nav.internal" class="int"><a href="#">{{ int.intLink }} <span v-if="int.sub"><img
@@ -96,28 +101,34 @@ export default {
               </div>
             </li>
           </ul>
+          <!--Cart and Button-->
           <div class="d-flex align-items-center">
             <div class="cart position-relative p-2 me-2">
               <div @click="isShowCart()">
                 <img src="../../assets/icon/cart-icon.png" alt="cart">
+                <!--Number of Items in the cart-->
                 <p class="number-object-cart" v-bind="cartLength" v-if="cartObject.length">
                   {{ cartNumber }}
                 </p>
               </div>
+              <!--Items in Cart-->
               <div class="visual-cart" :class="showCart ? 'active' : ''" v-if="cartObject.length">
                 <div class="info-cart px-4 d-flex justify-content-between">
                   <h3>Cart</h3>
                   <p>{{ cartNumber }}</p>
                 </div>
+                <!--card of single item in the cart-->
                 <ul>
                   <li v-for="(cartItem, index) in cartObject" class="px-4 py-1 m-0">
                     <div class="card mb-3">
                       <span class="fw-bold delete-item" @click="deleteItemCart(index)">X</span>
                       <div class="row g-0">
                         <div class="col-md-4 my-auto ps-2">
+                          <!--Image of the item-->
                           <img :src="getCartImageUrl(cartItem.urlImage)" class="img-fluid rounded-start"
                             :alt="cartItem.name">
                         </div>
+                        <!--body of the card-->
                         <div class="col-md-8">
                           <div class="card-body">
                             <h5 class="card-title">{{ cartItem.name }}</h5>
@@ -128,11 +139,13 @@ export default {
                     </div>
                   </li>
                 </ul>
+                <!--checkout button-->
                 <div class="checkout-button text-center">
                   <BaseButton contentButton="CHECKOUT" :isArrow="false" />
                 </div>
               </div>
             </div>
+            <!--button of live streaming-->
             <BaseButton contentButton="LIVE STREAMING" :isArrow="false" />
           </div>
         </div>
@@ -171,7 +184,6 @@ ul {
   .card {
     color: white;
     background-color: #30405F;
-
   }
 
   .sale {
@@ -182,7 +194,7 @@ ul {
 
 li {
   position: relative;
-  margin-right: 15px
+  margin-right: 15px;
 }
 
 #header-nav .navbar-nav {
@@ -293,5 +305,69 @@ li .active {
       right: 2px;
     }
   }
+}
+
+@media (max-width: 1200px) {
+  .navbar-expand-lg .navbar-collapse {
+    display: flex !important;
+    gap: 40px;
+    justify-content: center;
+    gap: 20px;
+    flex-basis: auto;
+
+    .arrow {
+      display: none;
+    }
+
+    .navbar-nav {
+      flex-direction: row;
+    }
+
+    a {
+      font-size: 16px;
+    }
+  }
+}
+
+@media (max-width: 992px) {
+  .container {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  #header-nav .navbar-nav {
+    margin: 0;
+  }
+
+  .visual-cart {
+    left: -100%;
+  }
+
+  .navbar-expand-lg .navbar-collapse {
+    display: flex !important;
+    flex-direction: column;
+    justify-content: center;
+    flex-basis: auto;
+
+    a {
+      font-size: 16px;
+    }
+
+    .soldier {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .navbar-expand-lg .navbar-collapse {
+    flex-basis: auto;
+    font-size: 16px;
+  }
+}
+
+
+.collapse:not(.show) {
+  display: block;
 }
 </style>
