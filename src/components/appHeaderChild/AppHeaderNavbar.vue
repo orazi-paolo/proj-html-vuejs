@@ -84,16 +84,16 @@ export default {
         <div class="collapse navbar-collapse">
           <!--Main Links-->
           <ul class="navbar-nav">
-            <li v-for="(nav, index) in navLink" class="link" @click="isActive(index)">
+            <li v-for="(nav, index) in navLink" :key="index" class="link" @click="isActive(index)">
               <a href="#" :class="(active === index) ? 'active' : ''">{{ nav.name }} <span v-if="nav.internal"
                   class="arrow"><img src="../../assets/svg/c-down-arrow.svg" alt=""></span></a>
               <div class="internal-link" v-if="nav.internal">
                 <ul>
-                  <li v-for="int in nav.internal" class="int"><a href="#">{{ int.intLink }} <span v-if="int.sub"><img
-                          src="../../assets/svg/b-right-arrow.svg" alt=""></span></a>
+                  <li v-for="int in nav.internal" :key="index" class="int"><a href="#">{{ int.intLink }} <span
+                        v-if="int.sub"><img src="../../assets/svg/b-right-arrow.svg" alt=""></span></a>
                     <div class="sub-link" v-if="int.sub">
                       <ul class="sub">
-                        <li v-for="sub in int.sub"><a href="#">{{ sub.subLink }}</a></li>
+                        <li v-for="sub in int.sub" :key="index"><a href="#">{{ sub.subLink }}</a></li>
                       </ul>
                     </div>
                   </li>
