@@ -58,11 +58,22 @@ export default {
     },
     isShowCart() {
       this.showCart = !this.showCart
+    }, navShowScrollDown() {
+      let scrollY = window.scrollY
+      if (scrollY === 0) {
+        this.scroll = false;
+      } else {
+        this.scroll = true;
+      }
+      this.topDocument = scrollY;
     }
 
   },
   mounted() {
-    window.addEventListener('scroll', this.isPageScrolled)
+    window.addEventListener('scroll', this.navShowScrollDown);
+  },
+  unmounted() {
+    window.removeEventListener('scroll', this.navShowScrollDown);
   },
   computed: {
     cartLength() {
