@@ -54,9 +54,11 @@ export default {
 
 
 .fade-disperse-enter-active,
+.fade-disperse-leave-active .fade-disperse-enter-active,
 .fade-disperse-leave-active {
   transition: all 1s ease;
 }
+
 
 .fade-disperse-leave-to {
   opacity: 0;
@@ -68,6 +70,7 @@ export default {
   position: relative;
   z-index: 2;
 }
+
 
 .AppLoader {
   position: absolute;
