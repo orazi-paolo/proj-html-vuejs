@@ -92,6 +92,7 @@ export default {
   .title {
     width: 100%;
     z-index: 0;
+    text-align: center;
   }
 
 
