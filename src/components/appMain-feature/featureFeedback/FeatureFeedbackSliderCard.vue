@@ -55,7 +55,6 @@ export default {
 </template>
 
 <style lang="scss" scoped>
-
 .card {
   background-color: #30405F;
   border-radius: 20px;

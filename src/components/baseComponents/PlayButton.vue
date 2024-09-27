@@ -11,7 +11,7 @@ export default {
 <template>
     <div class="play-btn p-2" role="btn">
         <div class="play-icon bg-white d-flex justify-content-center align-items-center">
-            <img src="../../assets/icon/play-icon.png" alt="play-icon">
+            <img src="/src/assets/icon/play-icon.png" alt="play-icon">
         </div>
     </div>
 </template>

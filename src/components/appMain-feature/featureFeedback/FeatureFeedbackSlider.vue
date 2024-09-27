@@ -5,9 +5,12 @@ export default {
   data() {
     return {
       //Variables
+      sliderPosition: 0, // Store Initial slider position
+      activeCards: [], // Store visible cards
+
       userProfiles: [
         {
-          id: 3,
+          id: 1,
           firstName: "Kim",
           lastName: "Ramos",
           nationality: "Serbia",
@@ -25,7 +28,7 @@ export default {
           starsRate: 5
         },
         {
-          id: 1,
+          id: 3,
           firstName: "Merle",
           lastName: "Fisher",
           nationality: "United States",
@@ -41,22 +44,28 @@ export default {
     FeatureFeedbackSliderCard,
   },
 
-  methods: {
-    shuffleProfiles() {
-      let middle = this.userProfiles[1]
-      let first = this.userProfiles[0]
-      // Change position of objects
-      this.userProfiles[0] = middle
-      this.userProfiles[1] = first
+  computed: {
+    sliderStyle() {
+      return {
+        transform: `translate3d(${this.sliderPosition}%, 0, 0)`,
+        transition: 'transform 1s ease-in-out'
+      }
+    }
+  },
 
-      // Rivert the user profiles array
-      this.userProfiles.reverse()
+  methods: {
+    scrollSlider() {
+      this.sliderPosition -= 100 // Scroll cards
     }
   },
 
   mounted() {
+    // Print User profile cards
+    this.activeCards = this.userProfiles
+
+    // Set interval scrolling
     setInterval(() => {
-      this.shuffleProfiles()
+      this.scrollSlider()
     }, 2000)
   }
 }
@@ -65,33 +74,14 @@ export default {
 <template>
   <!-- Feedback Slider  -->
   <div class="container">
-    <TransitionGroup class="row mt-5" name="scroll" tag="div">
-      <div class="col" v-for="profile in userProfiles" :key="profile.id">
+    <div class="row mt-5 overflow-hidden">
+      <div class="col" v-for="profile in activeCards" :key="profile.id" :style="sliderStyle">
         <FeatureFeedbackSliderCard :firstName="profile.firstName" :lastName="profile.lastName"
           :nationality="profile.nationality" :description="profile.description" :profileImgUrl="profile.profileImgUrl"
           :starsRate="profile.starsRate" />
       </div>
-    </TransitionGroup>
+    </div>
   </div>
 </template>
 
-<style lang="scss" scoped>
-.scroll-move,
-/* apply transition to moving elements */
-.scroll-enter-active,
-.scroll-leave-active {
-  transition: all 0.5s ease;
-}
-
-.scroll-enter-from,
-.scroll-leave-to {
-  opacity: 0;
-  transform: translateX(30px);
-}
-
-/* ensure leaving items are taken out of layout flow so that moving
-   animations can be calculated correctly. */
-.scroll-leave-active {
-  position: absolute;
-}
-</style>
+<style lang="scss" scoped></style>
