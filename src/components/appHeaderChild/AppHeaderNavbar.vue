@@ -237,6 +237,7 @@ li a {
 
   &:hover {
     color: #94CB53;
+    transition: 0.3s;
 
     img {
       filter: invert(77%) sepia(18%) saturate(1178%) hue-rotate(44deg) brightness(94%) contrast(89%);
@@ -335,6 +336,11 @@ li .active {
     gap: 20px;
   }
 
+  .int:hover .sub-link {
+    left: -120%;
+    top: 10%;
+  }
+
   #header-nav .navbar-nav {
     margin: 0;
   }
@@ -360,6 +366,7 @@ li .active {
 }
 
 @media (max-width: 576px) {
+
   .navbar-expand-lg .navbar-collapse {
     flex-basis: auto;
     font-size: 16px;
