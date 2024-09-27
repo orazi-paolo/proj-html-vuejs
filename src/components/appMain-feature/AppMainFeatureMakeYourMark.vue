@@ -61,6 +61,13 @@ export default {
       position: absolute;
       top: 12%;
       left: -200px;
+
+      @media (min-width: 1400px){
+       left: -100px;
+      }
+      @media (min-width: 1700px){
+       left: 100px;
+      }
     }
   }
 </style>
