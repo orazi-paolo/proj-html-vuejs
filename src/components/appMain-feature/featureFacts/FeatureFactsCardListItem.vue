@@ -32,10 +32,18 @@ export default {
       setTimeout(() => {
         clearInterval(increaseNumber);
       }, 2500);
-    }
+    },
+    checkPosition() {
+      // check from the top to the bottom of the scroll the position of li.card-fact(by $ref) on the page
+      const cardPosition = this.$refs.cardFact.getBoundingClientRect().top;
+      // execute getIncreaseNumber if the li.card-fact is visible on the page
+      if (cardPosition < window.innerHeight) { 
+        this.getIncreaseNumber(); 
+      }
+    },
   },
   mounted(){
-    this.getIncreaseNumber()
+    window.addEventListener("scroll", this.checkPosition);
   }
 }
 </script>
@@ -43,7 +51,7 @@ export default {
 <!-- FeatureFactsCardListItem -->
 <template>
   <!-- li of the single card-fact(fact) -->
-  <li class="card-fact">
+  <li ref="cardFact" class="card-fact">
     <!-- number of the fact that increases by the method: getIncreaseNumber() -->
     <h5>{{ incrementedNumber  }}</h5>
     <!-- title of the card -->
