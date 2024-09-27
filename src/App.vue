@@ -49,19 +49,22 @@ export default {
 @use "/src/style/general.scss";
 @use '/node_modules/bootstrap-icons/font/bootstrap-icons.min.css';
 
-.fade-disperse-enter-active, .fade-disperse-leave-active {
+.fade-disperse-enter-active,
+.fade-disperse-leave-active {
   transition: all 1s ease;
 }
+
 .fade-disperse-leave-to {
   opacity: 0;
-  transform: scale(1.1); 
-  filter: blur(5px); 
+  transform: scale(1.1);
+  filter: blur(5px);
 }
 
 .main-content {
   position: relative;
   z-index: 2;
 }
+
 .AppLoader {
   position: absolute;
   top: 0;
@@ -71,8 +74,8 @@ export default {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: rgba(255, 255, 255, 0.9); 
-  z-index: 3; 
+  background-color: rgba(255, 255, 255, 0.9);
+  z-index: 3;
 }
 
 .pointer {
